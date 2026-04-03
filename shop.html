@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop KIT | Non-Alcoholic Craft Beer</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <p>FREE SHIPPING ON ORDERS OF 4+ SIX-PACKS • HAVE A KIT</p>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <a href="/" class="logo">
+                    <img src="images/logos/Kit_Non_Alc_Black.svg" alt="KIT Non-Alc Logo">
+                </a>
+            </div>
+
+            <nav class="header-nav">
+                <a href="#shop" class="nav-link">Shop</a>
+                <a href="find-kit.html" class="nav-link">Find In Store</a>
+                <div class="nav-dropdown">
+                    <button class="nav-link dropdown-toggle">Learn</button>
+                    <div class="dropdown-menu">
+                        <a href="our-story.html">Our Story</a>
+                        <a href="how-we-brew.html">How We Brew</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="header-right">
+                <button class="search-toggle" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 12L18 18" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+                <button class="cart-toggle" aria-label="Open cart">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <rect x="2" y="4" width="16" height="14" rx="1" stroke="currentColor" stroke-width="2"/>
+                        <path d="M5 4V2M15 4V2" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Product Page -->
+        <section class="product-section">
+            <div class="product-container">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="gallery-main">
+                        <div class="img-placeholder" aria-label="KIT Non-Alcoholic Beer main product image"></div>
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <button class="thumbnail active" aria-label="Product view 1">
+                            <div class="img-placeholder" aria-label="Product thumbnail 1"></div>
+                        </button>
+                        <button class="thumbnail" aria-label="Product view 2">
+                            <div class="img-placeholder" aria-label="Product thumbnail 2"></div>
+                        </button>
+                        <button class="thumbnail" aria-label="Product view 3">
+                            <div class="img-placeholder" aria-label="Product thumbnail 3"></div>
+                        </button>
+                        <button class="thumbnail" aria-label="Product view 4">
+                            <div class="img-placeholder" aria-label="Product thumbnail 4"></div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <div class="product-eyebrow">KIT NON-ALC</div>
+                    <h1 class="product-name">Non-Alcoholic Craft Beer</h1>
+
+                    <!-- Variant Selector -->
+                    <div class="variant-selector">
+                        <div class="variant-label">Flavor:</div>
+                        <div class="variant-buttons">
+                            <button class="variant-btn active" data-variant="blonde" data-flavor="Crisp & Crushable" data-price="15.00">
+                                Blonde
+                            </button>
+                            <button class="variant-btn" data-variant="golden" data-flavor="Light & Citrusy" data-price="15.00">
+                                Golden
+                            </button>
+                            <button class="variant-btn" data-variant="hazy-ipa" data-flavor="Tropical & Juicy" data-price="15.00">
+                                Hazy IPA
+                            </button>
+                            <button class="variant-btn" data-variant="variety-pack" data-flavor="Try Them All" data-price="15.00">
+                                Variety Pack
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Flavor Descriptor -->
+                    <p class="flavor-descriptor">Crisp & Crushable</p>
+
+                    <!-- Price -->
+                    <div class="price-display">
+                        <span class="price" data-price="15.00">$15.00</span>
+                    </div>
+
+                    <!-- Quantity Selector -->
+                    <div class="quantity-selector">
+                        <button class="qty-btn qty-minus">−</button>
+                        <input type="number" class="qty-input" value="1" min="1">
+                        <button class="qty-btn qty-plus">+</button>
+                    </div>
+
+                    <!-- Add to Cart Button -->
+                    <button class="btn btn-primary btn-lg add-to-cart">ADD TO CART</button>
+
+                    <!-- Buy Elsewhere Section -->
+                    <div class="buy-elsewhere">
+                        <p class="buy-elsewhere-label">Buy Elsewhere</p>
+                        <div class="retailer-buttons">
+                            <a href="#" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Amazon</a>
+                            <a href="#" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Walmart</a>
+                            <a href="#" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Whole Foods</a>
+                            <a href="#" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Thrive Market</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Details Tabs -->
+        <section class="product-details">
+            <div class="container">
+                <div class="tabs">
+                    <div class="tab-nav">
+                        <button class="tab-button active" data-tab="description">Description</button>
+                        <button class="tab-button" data-tab="nutrition">Nutrition</button>
+                        <button class="tab-button" data-tab="ingredients">Ingredients</button>
+                    </div>
+
+                    <div class="tab-content">
+                        <!-- Description Tab -->
+                        <div class="tab-pane active" id="description">
+                            <h3>About KIT Non-Alcoholic Beer</h3>
+                            <p>KIT Non-Alcoholic Craft Beer is brewed with the same commitment to quality and flavor as traditional craft beer. We remove the alcohol while keeping all the taste, aroma, and character you expect from a great beer.</p>
+                            <p>Each style is crafted to deliver a distinct flavor experience without any compromise on authenticity.</p>
+                            <div class="award-badges">
+                                <div class="badge">GIBCC First Place</div>
+                                <div class="badge">US Open Silver Medal</div>
+                                <div class="badge">Best of Craft Beer Awards Gold</div>
+                                <div class="badge">DE First Place</div>
+                            </div>
+                        </div>
+
+                        <!-- Nutrition Tab -->
+                        <div class="tab-pane" id="nutrition">
+                            <h3>Nutrition Facts</h3>
+                            <p class="nutrition-subtitle">Per 12 FL OZ</p>
+                            <div class="nutrition-grid">
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Calories</span>
+                                    <span class="nutrition-value">86</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Carbs</span>
+                                    <span class="nutrition-value">18g</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Protein</span>
+                                    <span class="nutrition-value">1.5g</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="nutrition-label">Fat</span>
+                                    <span class="nutrition-value">0g</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ingredients Tab -->
+                        <div class="tab-pane" id="ingredients">
+                            <h3>Ingredients</h3>
+                            <ul class="ingredients-list">
+                                <li>Water</li>
+                                <li>Malt</li>
+                                <li>Hops</li>
+                                <li>Yeast</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="reviews-section">
+            <div class="container">
+                <h2>REVIEWS</h2>
+                <div class="reviews-placeholder">
+                    <p>Be the first to write a review</p>
+                    <button class="btn btn-primary">Write a Review</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay In The Kit</h2>
+                <form class="newsletter-form" action="#" method="post">
+                    <input type="email" placeholder="Enter your email" required aria-label="Email address">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="#shop">All Products</a></li>
+                        <li><a href="#shop">Non-Alcoholic Beer</a></li>
+                        <li><a href="#shop">Gift Sets</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Learn</h3>
+                    <ul>
+                        <li><a href="our-story.html">Our Story</a></li>
+                        <li><a href="how-we-brew.html">How We Brew</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="find-kit.html">Find In Store</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Settings</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1"/>
+                            <circle cx="10" cy="10" r="3" stroke="currentColor" stroke-width="1" fill="none"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1"/>
+                        </svg>
+                    </a>
+                </div>
+                <p class="copyright">© 2026 KIT NON-ALC.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="cart-close" aria-label="Close cart">×</button>
+        </div>
+        <div class="cart-body">
+            <p>Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <button class="btn btn-primary btn-lg">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu">
+        <div class="mobile-menu-header">
+            <h2>Menu</h2>
+            <button class="mobile-menu-close" aria-label="Close menu">×</button>
+        </div>
+        <ul class="mobile-menu-list">
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="find-kit.html">Find In Store</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="how-we-brew.html">How We Brew</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay">
+        <div class="search-container">
+            <input type="search" class="search-input" placeholder="Search products..." aria-label="Search">
+            <button class="search-close" aria-label="Close search">×</button>
+        </div>
+        <div class="search-results"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

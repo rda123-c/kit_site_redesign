@@ -1,0 +1,92 @@
+/* ========================================
+   KIT NON-ALC BRAND DESIGN TOKENS
+   ======================================== */
+
+:root {
+  /* Colors */
+  --kit-blonde-blue: #0082CA;
+  --kit-golden-blue: #7FBFEF;
+  --kit-charcoal: #333333;
+  --kit-white: #FFFFFF;
+  --kit-blonde-red: #E96B58;
+  --kit-golden-orange: #FF8200;
+  --kit-hazy-gold: #FFBF3F;
+  --kit-hazy-green: #249E6B;
+  --kit-light-gray: #F5F5F5;
+  --kit-medium-gray: #E0E0E0;
+  --kit-dark-gray: #666666;
+
+  /* Typography Scale */
+  --font-family-serif: 'New Spirit', 'Source Serif 4', Georgia, serif;
+  --font-family-sans: 'BB Torsos Pro', 'Mona Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Font Sizes */
+  --fs-eyebrow: 0.75rem;
+  --fs-body-sm: 0.875rem;
+  --fs-body: 1rem;
+  --fs-subhead: 1.125rem;
+  --fs-h4: 1.5rem;
+  --fs-h3: 2rem;
+  --fs-h2: 2.5rem;
+  --fs-h1: 3rem;
+  --fs-hero: 3.5rem;
+
+  /* Font Weights */
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  /* Letter Spacing */
+  --ls-normal: 0;
+  --ls-tight: -0.01em;
+  --ls-wide: 0.05em;
+  --ls-eyebrow: 0.15em;
+
+  /* Line Heights */
+  --lh-tight: 1.2;
+  --lh-body: 1.6;
+  --lh-loose: 1.8;
+
+  /* Spacing Scale (4px base) */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 5rem;
+  --space-5xl: 6rem;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 350ms ease;
+
+  /* Layout */
+  --max-width: 1200px;
+  --container-padding: var(--space-xl);
+
+  /* Breakpoints (mobile-first) */
+  --bp-tablet: 768px;
+  --bp-desktop: 1024px;
+
+  /* Z-Index Scale */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal: 300;
+  --z-overlay: 400;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+}

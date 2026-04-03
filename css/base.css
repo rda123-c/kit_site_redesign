@@ -1,0 +1,259 @@
+/* ========================================
+   FONT FACE DECLARATIONS
+   ======================================== */
+
+@font-face {
+  font-family: 'New Spirit';
+  src: url('../fonts/NewSpirit-Regular.woff2') format('woff2'),
+       url('../fonts/NewSpirit-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'New Spirit';
+  src: url('../fonts/NewSpirit-Medium.woff2') format('woff2'),
+       url('../fonts/NewSpirit-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'New Spirit';
+  src: url('../fonts/NewSpirit-MediumItalic.woff2') format('woff2'),
+       url('../fonts/NewSpirit-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'New Spirit';
+  src: url('../fonts/NewSpirit-Bold.woff2') format('woff2'),
+       url('../fonts/NewSpirit-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BB Torsos Pro';
+  src: url('../fonts/BBTorsosPro-SemiRegular.woff2') format('woff2'),
+       url('../fonts/BBTorsosPro-SemiRegular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BB Torsos Pro';
+  src: url('../fonts/BBTorsosPro-SemiBold.woff2') format('woff2'),
+       url('../fonts/BBTorsosPro-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BB Torsos Pro';
+  src: url('../fonts/BBTorsosPro-Bold.woff2') format('woff2'),
+       url('../fonts/BBTorsosPro-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,700;1,8..60,500&family=Mona+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* ========================================
+   CSS RESET & BASE STYLES
+   ======================================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+  color: var(--kit-charcoal);
+  background-color: var(--kit-white);
+}
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-serif);
+  font-weight: var(--fw-semi-bold);
+  line-height: var(--lh-tight);
+  margin-bottom: var(--space-md);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+h4 {
+  font-size: var(--fs-h4);
+}
+
+h5,
+h6 {
+  font-size: var(--fs-subhead);
+}
+
+p {
+  margin-bottom: var(--space-md);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--kit-blonde-blue);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+a:hover {
+  color: var(--kit-golden-blue);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+input,
+textarea,
+select {
+  border: 1px solid var(--kit-medium-gray);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-base);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--kit-blonde-blue);
+  box-shadow: 0 0 0 3px rgba(0, 130, 202, 0.1);
+}
+
+ul,
+ol {
+  list-style-position: inside;
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+.eyebrow {
+  font-family: var(--font-family-sans);
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-semi-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--kit-blonde-blue);
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.headline {
+  font-family: var(--font-family-serif);
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-semi-bold);
+  line-height: var(--lh-tight);
+  color: var(--kit-charcoal);
+}
+
+.subhead {
+  font-family: var(--font-family-sans);
+  font-size: var(--fs-subhead);
+  font-weight: var(--fw-semi-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  color: var(--kit-charcoal);
+}
+
+.body-text {
+  font-family: var(--font-family-sans);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+  color: var(--kit-charcoal);
+}
+
+.cta-text {
+  font-family: var(--font-family-sans);
+  font-size: var(--fs-subhead);
+  font-weight: var(--fw-semi-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  color: var(--kit-white);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.section {
+  padding: var(--space-3xl) var(--container-padding);
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: var(--space-4xl) var(--container-padding);
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
