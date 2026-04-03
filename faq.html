@@ -12,47 +12,41 @@
 <body>
     <!-- Announcement Bar -->
     <div class="announcement-bar">
-        <p>FREE SHIPPING ON ORDERS OF 4+ SIX-PACKS • HAVE A KIT</p>
+        <p>Now in Whole Foods Across New England!</p>
     </div>
 
     <!-- Header -->
     <header class="header">
         <div class="header-container">
-            <div class="header-left">
-                <a href="/" class="logo">
-                    <img src="images/logos/Kit_Non_Alc_Black.svg" alt="KIT Non-Alc Logo">
+            <div class="header-logo">
+                <a href="index.html" aria-label="KIT NON-ALC Home">
+                    <img src="images/logos/Kit_Non_Alc_Black.svg" alt="KIT NON-ALC">
                 </a>
             </div>
 
             <nav class="header-nav">
-                <a href="shop.html" class="nav-link">Shop</a>
-                <a href="find-kit.html" class="nav-link">Find In Store</a>
-                <div class="nav-dropdown">
-                    <button class="nav-link dropdown-toggle">Learn</button>
-                    <div class="dropdown-menu">
-                        <a href="our-story.html">Our Story</a>
-                        <a href="how-we-brew.html">How We Brew</a>
-                    </div>
-                </div>
+                <ul class="nav-links">
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="find-kit.html">Find In Store</a></li>
+                    <li class="nav-dropdown">
+                        <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Learn</button>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="our-story.html">Our Story</a></li>
+                            <li><a href="how-we-brew.html">How We Brew</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </nav>
 
-            <div class="header-right">
-                <button class="search-toggle" aria-label="Search">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/>
-                        <path d="M12 12L18 18" stroke="currentColor" stroke-width="2"/>
+            <div class="header-icons">
+                <button class="header-icon-btn menu-toggle" aria-label="Menu" aria-expanded="false">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     </svg>
-                </button>
-                <button class="cart-toggle" aria-label="Open cart">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <rect x="2" y="4" width="16" height="14" rx="1" stroke="currentColor" stroke-width="2"/>
-                        <path d="M5 4V2M15 4V2" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                </button>
-                <button class="mobile-menu-toggle" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
                 </button>
             </div>
         </div>
@@ -75,7 +69,6 @@
                 <!-- Sticky Category Nav -->
                 <div class="faq-category-nav">
                     <button class="category-pill active" data-category="product">Product</button>
-                    <button class="category-pill" data-category="shipping">Shipping</button>
                     <button class="category-pill" data-category="general">General</button>
                 </div>
 
@@ -136,39 +129,6 @@
                             <summary class="faq-question">Is non-alcoholic beer safe for pregnant women?</summary>
                             <div class="faq-answer">
                                 <p>While KIT contains less than 0.5% ABV, we recommend consulting with your doctor before consuming any alcoholic or non-alcoholic beverages during pregnancy.</p>
-                            </div>
-                        </details>
-                    </div>
-
-                    <!-- Shipping Category -->
-                    <div class="faq-category" id="shipping" style="display: none;">
-                        <h2 class="category-heading">Shipping & Orders</h2>
-
-                        <details class="faq-item">
-                            <summary class="faq-question">Where do you ship?</summary>
-                            <div class="faq-answer">
-                                <p>We ship nationwide across the United States. Due to shipping regulations, we are currently unable to ship to certain states. Please check our shipping policy for complete information.</p>
-                            </div>
-                        </details>
-
-                        <details class="faq-item">
-                            <summary class="faq-question">How long does shipping take?</summary>
-                            <div class="faq-answer">
-                                <p>Standard shipping typically takes 3-7 business days from the date of order. Transit times may vary depending on your location and current shipping volume.</p>
-                            </div>
-                        </details>
-
-                        <details class="faq-item">
-                            <summary class="faq-question">Do you offer free shipping?</summary>
-                            <div class="faq-answer">
-                                <p>Yes! We offer free shipping on all orders of 4+ six-packs. This helps us reduce packaging waste and get great beer to you affordably.</p>
-                            </div>
-                        </details>
-
-                        <details class="faq-item">
-                            <summary class="faq-question">I want to buy beer as a gift - how long will it last?</summary>
-                            <div class="faq-answer">
-                                <p>KIT Non-Alcoholic Beer is best enjoyed fresh. Check the best-by date on each bottle. When stored in a cool, dark place, our beer maintains optimal flavor for several months after purchase.</p>
                             </div>
                         </details>
                     </div>
@@ -284,19 +244,6 @@
         </div>
     </footer>
 
-    <!-- Cart Drawer -->
-    <div class="cart-drawer">
-        <div class="cart-header">
-            <h2>Your Cart</h2>
-            <button class="cart-close" aria-label="Close cart">×</button>
-        </div>
-        <div class="cart-body">
-            <p>Your cart is empty</p>
-        </div>
-        <div class="cart-footer">
-            <button class="btn btn-primary btn-lg">Checkout</button>
-        </div>
-    </div>
 
     <!-- Mobile Menu -->
     <nav class="mobile-menu">
@@ -314,14 +261,6 @@
         </ul>
     </nav>
 
-    <!-- Search Overlay -->
-    <div class="search-overlay">
-        <div class="search-container">
-            <input type="search" class="search-input" placeholder="Search products..." aria-label="Search">
-            <button class="search-close" aria-label="Close search">×</button>
-        </div>
-        <div class="search-results"></div>
-    </div>
 
     <script src="js/main.js"></script>
 </body>

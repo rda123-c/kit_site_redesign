@@ -23,7 +23,7 @@
 
 .header {
   background-color: var(--kit-white);
-  padding: var(--space-lg) var(--space-xl);
+  padding: var(--space-sm) var(--space-xl);
   position: sticky;
   top: 0;
   z-index: var(--z-sticky);
@@ -45,7 +45,7 @@
 
 .header-logo {
   flex: 0 0 auto;
-  max-width: 120px;
+  max-width: 90px;
 }
 
 .header-logo img {
@@ -138,6 +138,10 @@
   color: var(--kit-blonde-blue);
 }
 
+.nav-dropdown {
+  position: relative;
+}
+
 .nav-dropdown-menu,
 .dropdown-menu {
   position: absolute;
@@ -154,8 +158,19 @@
   transition: opacity var(--transition-base), visibility var(--transition-base), transform var(--transition-base);
   z-index: var(--z-dropdown);
   box-shadow: var(--shadow-lg);
-  margin-top: var(--space-md);
+  margin-top: 0;
   list-style: none;
+}
+
+/* Invisible bridge to prevent hover gap */
+.nav-dropdown-menu::before,
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+  width: 100%;
+  height: 12px;
 }
 
 .nav-dropdown:hover .nav-dropdown-menu,
@@ -624,9 +639,10 @@
 
 .product-image {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 300px;
   object-fit: cover;
-  display: block;
+  object-position: center;
+  border-radius: var(--radius-md, 8px);
 }
 
 .product-info {
@@ -793,7 +809,8 @@
   padding: 0 var(--container-padding);
 }
 
-.footer-columns {
+.footer-columns,
+.footer-content {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-2xl);
@@ -801,7 +818,8 @@
 }
 
 @media (min-width: 768px) {
-  .footer-columns {
+  .footer-columns,
+  .footer-content {
     grid-template-columns: repeat(4, 1fr);
     gap: var(--space-xl);
   }
@@ -815,6 +833,12 @@
   letter-spacing: var(--ls-wide);
   color: var(--kit-white);
   margin-bottom: var(--space-lg);
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-column a {
@@ -981,22 +1005,13 @@
 }
 
 /* ========================================
-   IMAGE PLACEHOLDER
+   IMAGE PLACEHOLDER (Legacy - use real images)
    ======================================== */
 
 .img-placeholder {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  background-color: #e0f0fa;
+  height: auto;
   border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-family-sans);
-  font-size: var(--fs-body);
-  font-weight: var(--fw-semi-bold);
-  color: var(--kit-blonde-blue);
-  text-transform: uppercase;
 }
 
 .img-placeholder--wide {
@@ -1109,6 +1124,8 @@
   left: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center;
   z-index: 0;
 }
 
@@ -1173,7 +1190,11 @@
 }
 
 .lifestyle-image {
-  aspect-ratio: 4 / 5;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius-md, 8px);
 }
 
 .brand-story {
@@ -1200,7 +1221,11 @@
 }
 
 .brand-story-image {
-  aspect-ratio: 4 / 5;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius-md, 8px);
 }
 
 .brand-story-content {

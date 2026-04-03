@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ============================================================================
 
   // Mobile Menu Toggle
-  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+  const mobileMenuToggle = document.querySelector('.menu-toggle') || document.querySelector('.mobile-menu-toggle');
   const mobileMenu = document.querySelector('.mobile-menu');
   const mobileMenuClose = document.querySelector('.mobile-menu-close') || document.querySelector('.mobile-menu__close');
 
@@ -77,31 +77,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Learn Dropdown (desktop nav)
-  const dropdownItems = document.querySelectorAll('.nav-dropdown, .nav-item.has-dropdown');
-
-  dropdownItems.forEach((item) => {
-    item.addEventListener('click', () => {
-      dropdownItems.forEach((other) => {
-        if (other !== item) {
-          other.classList.remove('is-open');
-        }
-      });
-      item.classList.toggle('is-open');
+  // Learn Dropdown (desktop nav) — CSS :hover handles show/hide,
+  // JS only needed for mobile tap toggle
+  const dropdownToggles = document.querySelectorAll('.nav-dropdown-toggle');
+  dropdownToggles.forEach((toggle) => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      const parent = toggle.closest('.nav-dropdown');
+      if (parent) parent.classList.toggle('is-open');
     });
-
-    item.addEventListener('mouseleave', () => {
-      item.classList.remove('is-open');
-    });
-  });
-
-  // Close dropdown when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.nav-dropdown')) {
-      dropdownItems.forEach((item) => {
-        item.classList.remove('is-open');
-      });
-    }
   });
 
   // Announcement Bar Close
@@ -135,6 +119,26 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ============================================================================
+  // FIND KIT — IFRAME EXPAND ON CLICK
+  // ============================================================================
+
+  const finderContainer = document.getElementById('finderContainer');
+  const finderOverlay = document.getElementById('finderOverlay');
+  const finderIframe = document.getElementById('finderIframe');
+
+  if (finderContainer && finderOverlay && finderIframe) {
+    finderOverlay.addEventListener('click', () => {
+      // Expand the container
+      finderContainer.style.maxHeight = '1100px';
+      finderContainer.style.cursor = 'default';
+      // Allow iframe interaction
+      finderIframe.style.pointerEvents = 'auto';
+      // Remove the overlay
+      finderOverlay.remove();
+    });
+  }
+
+  // ============================================================================
   // HOMEPAGE-SPECIFIC
   // ============================================================================
 
@@ -157,32 +161,40 @@ document.addEventListener('DOMContentLoaded', () => {
       flavor: 'Crisp & Crushable',
       price: '$15.00',
       color: '#0082CA',
+      image: 'images/products/blonde-pour-1.jpg',
+      gallery: ['images/products/blonde-pour-1.jpg', 'images/products/blonde-cheers.jpg', 'images/products/blonde-can-1.jpg', 'images/products/blonde-cooler-1.jpg'],
       description:
-        'Blonde is a multiple award-winning non-alcoholic craft beer. Light and citrusy with notes of grapefruit and a crisp, hop-forward finish. 86 Calories, 18g Carbs per 12oz.'
+        'Award-winning non-alcoholic craft beer. Light and citrusy with notes of grapefruit and a crisp, hop-forward finish.'
     },
     golden: {
       name: 'Golden',
       flavor: 'Light & Citrusy',
       price: '$15.00',
       color: '#FF8200',
+      image: 'images/products/golden-can-1.jpg',
+      gallery: ['images/products/golden-can-1.jpg', 'images/products/golden-pour-1.jpg', 'images/products/golden-can-2.jpg', 'images/products/golden-cooler-1.jpg'],
       description:
-        'Golden is a refreshing non-alcoholic craft beer with bright citrus notes and a smooth, easy-drinking finish. Perfect for any occasion.'
+        'A refreshing non-alcoholic craft beer with bright citrus notes and a smooth, easy-drinking finish for any occasion.'
     },
     hazy: {
       name: 'Hazy IPA',
       flavor: 'Tropical & Juicy',
       price: '$15.00',
       color: '#249E6B',
+      image: 'images/products/hazy-can-1.jpg',
+      gallery: ['images/products/hazy-can-1.jpg', 'images/products/hazy-pour-may25.jpg', 'images/products/hazy-can-2.jpg', 'images/products/hazy-cooler-1.jpg'],
       description:
-        'Hazy IPA is a bold, tropical non-alcoholic craft beer bursting with juicy hop flavors and a smooth, hazy body.'
+        'Our Hazy IPA is a bold, tropical non-alcoholic craft beer bursting with juicy hop flavors and a smooth, hazy body.'
     },
     variety: {
       name: 'Variety Pack',
       flavor: 'Try Them All',
       price: '$28.00',
       color: '#FFBF3F',
+      image: 'images/products/variety-pack-1.jpg',
+      gallery: ['images/products/variety-pack-1.jpg', 'images/products/variety-cans-sky-1.jpg', 'images/products/variety-pack-1.jpg', 'images/products/variety-pack-1.jpg'],
       description:
-        "Can't decide? Try all three of our award-winning non-alcoholic craft beers in one convenient 12-pack."
+        "Can\u2019t decide? Try all three of our award-winning non-alcoholic craft beers in one convenient 12-pack."
     }
   };
 
@@ -190,8 +202,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const variantBtns = document.querySelectorAll('.variant-btn');
   const pdpFlavor = document.querySelector('.flavor-descriptor');
   const pdpPrice = document.querySelector('.price');
-  const pdpImage = document.querySelector('.main-image .img-placeholder');
-  const pdpDescription = document.querySelector('#description p');
+  const pdpImage = document.querySelector('.main-image img, .main-image .img-placeholder, .main-product-image');
+  const pdpDescription = document.querySelector('.style-description');
 
   if (variantBtns.length > 0) {
     variantBtns.forEach((btn) => {
@@ -215,9 +227,29 @@ document.addEventListener('DOMContentLoaded', () => {
           pdpPrice.textContent = variant.price;
         }
 
-        // Update product image color
+        // Update style description
+        if (pdpDescription && variant.description) {
+          pdpDescription.textContent = variant.description;
+        }
+
+        // Update product image
         if (pdpImage) {
-          pdpImage.style.backgroundColor = variant.color;
+          if (pdpImage.tagName === 'IMG') {
+            pdpImage.src = variant.image;
+            pdpImage.alt = 'KIT ' + variant.name;
+          } else {
+            pdpImage.style.backgroundColor = variant.color;
+          }
+        }
+
+        // Update gallery thumbnails
+        const thumbs = document.querySelectorAll('.thumbnail img, .gallery-thumb img');
+        if (thumbs.length > 0 && variant.gallery) {
+          thumbs.forEach((thumb, i) => {
+            if (variant.gallery[i]) {
+              thumb.src = variant.gallery[i];
+            }
+          });
         }
 
         // Update description
@@ -226,6 +258,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     });
+
+    // Auto-select variant from URL parameter (e.g., shop.html?variant=golden)
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlVariant = urlParams.get('variant');
+    if (urlVariant && variants[urlVariant]) {
+      const targetBtn = document.querySelector(`.variant-btn[data-variant="${urlVariant}"]`);
+      if (targetBtn) {
+        targetBtn.click();
+      }
+    }
   }
 
   // Quantity Selector

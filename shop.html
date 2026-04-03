@@ -12,47 +12,41 @@
 <body>
     <!-- Announcement Bar -->
     <div class="announcement-bar">
-        <p>FREE SHIPPING ON ORDERS OF 4+ SIX-PACKS • HAVE A KIT</p>
+        <p>Now in Whole Foods Across New England!</p>
     </div>
 
     <!-- Header -->
     <header class="header">
         <div class="header-container">
-            <div class="header-left">
-                <a href="/" class="logo">
-                    <img src="images/logos/Kit_Non_Alc_Black.svg" alt="KIT Non-Alc Logo">
+            <div class="header-logo">
+                <a href="index.html" aria-label="KIT NON-ALC Home">
+                    <img src="images/logos/Kit_Non_Alc_Black.svg" alt="KIT NON-ALC">
                 </a>
             </div>
 
             <nav class="header-nav">
-                <a href="#shop" class="nav-link">Shop</a>
-                <a href="find-kit.html" class="nav-link">Find In Store</a>
-                <div class="nav-dropdown">
-                    <button class="nav-link dropdown-toggle">Learn</button>
-                    <div class="dropdown-menu">
-                        <a href="our-story.html">Our Story</a>
-                        <a href="how-we-brew.html">How We Brew</a>
-                    </div>
-                </div>
+                <ul class="nav-links">
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="find-kit.html">Find In Store</a></li>
+                    <li class="nav-dropdown">
+                        <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Learn</button>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="our-story.html">Our Story</a></li>
+                            <li><a href="how-we-brew.html">How We Brew</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </nav>
 
-            <div class="header-right">
-                <button class="search-toggle" aria-label="Search">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/>
-                        <path d="M12 12L18 18" stroke="currentColor" stroke-width="2"/>
+            <div class="header-icons">
+                <button class="header-icon-btn menu-toggle" aria-label="Menu" aria-expanded="false">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     </svg>
-                </button>
-                <button class="cart-toggle" aria-label="Open cart">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <rect x="2" y="4" width="16" height="14" rx="1" stroke="currentColor" stroke-width="2"/>
-                        <path d="M5 4V2M15 4V2" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                </button>
-                <button class="mobile-menu-toggle" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
                 </button>
             </div>
         </div>
@@ -66,20 +60,20 @@
                 <!-- Product Gallery -->
                 <div class="product-gallery">
                     <div class="gallery-main">
-                        <div class="img-placeholder" aria-label="KIT Non-Alcoholic Beer main product image"></div>
+                        <img class="main-product-image" src="images/products/blonde-pour-1.jpg" alt="KIT Blonde Ale" data-blonde="images/products/blonde-pour-1.jpg" data-golden="images/products/golden-can-1.jpg" data-hazy="images/products/hazy-can-1.jpg" data-variety="images/products/variety-pack-1.jpg">
                     </div>
                     <div class="gallery-thumbnails">
                         <button class="thumbnail active" aria-label="Product view 1">
-                            <div class="img-placeholder" aria-label="Product thumbnail 1"></div>
+                            <img src="images/products/blonde-pour-1.jpg" alt="KIT Blonde Ale pour">
                         </button>
                         <button class="thumbnail" aria-label="Product view 2">
-                            <div class="img-placeholder" aria-label="Product thumbnail 2"></div>
+                            <img src="images/products/blonde-cheers.jpg" alt="KIT Blonde Ale pour detail">
                         </button>
                         <button class="thumbnail" aria-label="Product view 3">
-                            <div class="img-placeholder" aria-label="Product thumbnail 3"></div>
+                            <img src="images/products/blonde-can-1.jpg" alt="KIT Blonde Ale can">
                         </button>
                         <button class="thumbnail" aria-label="Product view 4">
-                            <div class="img-placeholder" aria-label="Product thumbnail 4"></div>
+                            <img src="images/products/blonde-cooler-1.jpg" alt="KIT Blonde Ale in cooler">
                         </button>
                     </div>
                 </div>
@@ -91,7 +85,7 @@
 
                     <!-- Variant Selector -->
                     <div class="variant-selector">
-                        <div class="variant-label">Flavor:</div>
+                        <div class="variant-label">Style:</div>
                         <div class="variant-buttons">
                             <button class="variant-btn active" data-variant="blonde" data-flavor="Crisp & Crushable" data-price="15.00">
                                 Blonde
@@ -99,73 +93,82 @@
                             <button class="variant-btn" data-variant="golden" data-flavor="Light & Citrusy" data-price="15.00">
                                 Golden
                             </button>
-                            <button class="variant-btn" data-variant="hazy-ipa" data-flavor="Tropical & Juicy" data-price="15.00">
+                            <button class="variant-btn" data-variant="hazy" data-flavor="Tropical & Juicy" data-price="15.00">
                                 Hazy IPA
                             </button>
-                            <button class="variant-btn" data-variant="variety-pack" data-flavor="Try Them All" data-price="15.00">
+                            <button class="variant-btn" data-variant="variety" data-flavor="Try Them All" data-price="15.00">
                                 Variety Pack
                             </button>
                         </div>
                     </div>
 
-                    <!-- Flavor Descriptor -->
-                    <p class="flavor-descriptor">Crisp & Crushable</p>
+                    <!-- Style Description -->
+                    <p class="style-description">Award-winning non-alcoholic craft beer. Light and citrusy with notes of grapefruit and a crisp, hop-forward finish.</p>
 
-                    <!-- Price -->
-                    <div class="price-display">
-                        <span class="price" data-price="15.00">$15.00</span>
-                    </div>
-
-                    <!-- Quantity Selector -->
-                    <div class="quantity-selector">
-                        <button class="qty-btn qty-minus">−</button>
-                        <input type="number" class="qty-input" value="1" min="1">
-                        <button class="qty-btn qty-plus">+</button>
-                    </div>
-
-                    <!-- Add to Cart Button -->
-                    <button class="btn btn-primary btn-lg add-to-cart">ADD TO CART</button>
-
-                    <!-- Buy Elsewhere Section -->
-                    <div class="buy-elsewhere">
-                        <p class="buy-elsewhere-label">Buy Elsewhere</p>
+                    <!-- Retailer Buy Buttons -->
+                    <div class="retailer-section">
+                        <p class="retailer-label">Order Online</p>
                         <div class="retailer-buttons">
-                            <a href="#" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Amazon</a>
-                            <a href="#" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Walmart</a>
-                            <a href="#" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Whole Foods</a>
-                            <a href="#" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Thrive Market</a>
+                            <a href="#" class="retailer-btn retailer-amazon" target="_blank" rel="noopener noreferrer" aria-label="Buy on Amazon">
+                                <img class="retailer-logo" src="images/retailers/amazon.svg" alt="Amazon">
+                            </a>
+                            <a href="#" class="retailer-btn retailer-walmart" target="_blank" rel="noopener noreferrer" aria-label="Buy on Walmart">
+                                <img class="retailer-logo" src="images/retailers/walmart.svg" alt="Walmart">
+                            </a>
+                            <a href="#" class="retailer-btn retailer-wholefoods" target="_blank" rel="noopener noreferrer" aria-label="Buy at Whole Foods">
+                                <img class="retailer-logo" src="images/retailers/wholefoods.svg" alt="Whole Foods">
+                            </a>
+                            <a href="#" class="retailer-btn retailer-thrive" target="_blank" rel="noopener noreferrer" aria-label="Buy on Thrive Market">
+                                <img class="retailer-logo" src="images/retailers/thrive.svg" alt="Thrive Market">
+                            </a>
+                            <a href="#" class="retailer-btn retailer-instacart" target="_blank" rel="noopener noreferrer" aria-label="Buy on Instacart">
+                                <img class="retailer-logo" src="images/retailers/instacart.svg" alt="Instacart">
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Product Details Tabs -->
+
+        <!-- Awards -->
+        <section class="pdp-awards">
+            <div class="container">
+                <div class="pdp-awards-layout">
+                <h2 class="pdp-awards-heading">Award-Winning<br>& Crushable</h2>
+                <div class="awards-container">
+                    <div class="award">
+                        <img src="images/awards/award-1.webp" alt="Gold Medal — Best of Craft Beer Awards, Best NA Hop-Forward Beer 2023" loading="lazy">
+                    </div>
+                    <div class="award">
+                        <img src="images/awards/award-2.webp" alt="First Place — GIBCC Non-Alcoholic Beer" loading="lazy">
+                    </div>
+                    <div class="award">
+                        <img src="images/awards/award-3.webp" alt="First Place — DE Non-Alcoholic Beer" loading="lazy">
+                    </div>
+                    <div class="award">
+                        <img src="images/awards/award-4.webp" alt="Silver Medal — US Open Beer Championship, NA Malt Beverage" loading="lazy">
+                    </div>
+                    <div class="award">
+                        <img src="images/awards/silver-medal.webp" alt="Silver Medal — Best of Craft Beer Awards, Best NA Hop-Forward Beer 2024" loading="lazy">
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nutrition & Ingredients -->
         <section class="product-details">
             <div class="container">
                 <div class="tabs">
                     <div class="tab-nav">
-                        <button class="tab-button active" data-tab="description">Description</button>
-                        <button class="tab-button" data-tab="nutrition">Nutrition</button>
+                        <button class="tab-button active" data-tab="nutrition">Nutrition</button>
                         <button class="tab-button" data-tab="ingredients">Ingredients</button>
                     </div>
 
                     <div class="tab-content">
-                        <!-- Description Tab -->
-                        <div class="tab-pane active" id="description">
-                            <h3>About KIT Non-Alcoholic Beer</h3>
-                            <p>KIT Non-Alcoholic Craft Beer is brewed with the same commitment to quality and flavor as traditional craft beer. We remove the alcohol while keeping all the taste, aroma, and character you expect from a great beer.</p>
-                            <p>Each style is crafted to deliver a distinct flavor experience without any compromise on authenticity.</p>
-                            <div class="award-badges">
-                                <div class="badge">GIBCC First Place</div>
-                                <div class="badge">US Open Silver Medal</div>
-                                <div class="badge">Best of Craft Beer Awards Gold</div>
-                                <div class="badge">DE First Place</div>
-                            </div>
-                        </div>
-
                         <!-- Nutrition Tab -->
-                        <div class="tab-pane" id="nutrition">
+                        <div class="tab-pane active" id="nutrition">
                             <h3>Nutrition Facts</h3>
                             <p class="nutrition-subtitle">Per 12 FL OZ</p>
                             <div class="nutrition-grid">
@@ -289,19 +292,6 @@
         </div>
     </footer>
 
-    <!-- Cart Drawer -->
-    <div class="cart-drawer">
-        <div class="cart-header">
-            <h2>Your Cart</h2>
-            <button class="cart-close" aria-label="Close cart">×</button>
-        </div>
-        <div class="cart-body">
-            <p>Your cart is empty</p>
-        </div>
-        <div class="cart-footer">
-            <button class="btn btn-primary btn-lg">Checkout</button>
-        </div>
-    </div>
 
     <!-- Mobile Menu -->
     <nav class="mobile-menu">
@@ -319,14 +309,6 @@
         </ul>
     </nav>
 
-    <!-- Search Overlay -->
-    <div class="search-overlay">
-        <div class="search-container">
-            <input type="search" class="search-input" placeholder="Search products..." aria-label="Search">
-            <button class="search-close" aria-label="Close search">×</button>
-        </div>
-        <div class="search-results"></div>
-    </div>
 
     <script src="js/main.js"></script>
 </body>

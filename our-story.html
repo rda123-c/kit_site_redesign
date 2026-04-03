@@ -12,47 +12,41 @@
 <body>
     <!-- Announcement Bar -->
     <div class="announcement-bar">
-        <p>FREE SHIPPING ON ORDERS OF 4+ SIX-PACKS • HAVE A KIT</p>
+        <p>Now in Whole Foods Across New England!</p>
     </div>
 
     <!-- Header -->
     <header class="header">
         <div class="header-container">
-            <div class="header-left">
-                <a href="/" class="logo">
-                    <img src="images/logos/Kit_Non_Alc_Black.svg" alt="KIT Non-Alc Logo">
+            <div class="header-logo">
+                <a href="index.html" aria-label="KIT NON-ALC Home">
+                    <img src="images/logos/Kit_Non_Alc_Black.svg" alt="KIT NON-ALC">
                 </a>
             </div>
 
             <nav class="header-nav">
-                <a href="shop.html" class="nav-link">Shop</a>
-                <a href="find-kit.html" class="nav-link">Find In Store</a>
-                <div class="nav-dropdown">
-                    <button class="nav-link dropdown-toggle">Learn</button>
-                    <div class="dropdown-menu">
-                        <a href="our-story.html">Our Story</a>
-                        <a href="how-we-brew.html">How We Brew</a>
-                    </div>
-                </div>
+                <ul class="nav-links">
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="find-kit.html">Find In Store</a></li>
+                    <li class="nav-dropdown">
+                        <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Learn</button>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="our-story.html">Our Story</a></li>
+                            <li><a href="how-we-brew.html">How We Brew</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </nav>
 
-            <div class="header-right">
-                <button class="search-toggle" aria-label="Search">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/>
-                        <path d="M12 12L18 18" stroke="currentColor" stroke-width="2"/>
+            <div class="header-icons">
+                <button class="header-icon-btn menu-toggle" aria-label="Menu" aria-expanded="false">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     </svg>
-                </button>
-                <button class="cart-toggle" aria-label="Open cart">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <rect x="2" y="4" width="16" height="14" rx="1" stroke="currentColor" stroke-width="2"/>
-                        <path d="M5 4V2M15 4V2" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                </button>
-                <button class="mobile-menu-toggle" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
                 </button>
             </div>
         </div>
@@ -65,112 +59,48 @@
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <div class="hero-eyebrow">OUR STORY</div>
-                <h1 class="hero-heading">Tomorrow's Favorite Beer.</h1>
+                <h1 class="hero-heading">Under Your Own Influence.</h1>
             </div>
-            <div class="img-placeholder" aria-label="KIT founders and brewery photo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
+            <img src="images/brand/fridge-1.jpg" alt="KIT NON-ALC in the fridge" class="hero-image" loading="eager" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
         </section>
 
-        <!-- Founders Section -->
+        <!-- Manifesto Section -->
         <section class="founders-section">
             <div class="container">
                 <div class="founders-grid">
                     <div class="founders-image">
-                        <div class="img-placeholder" aria-label="KIT founders Rob Barrett and Will Fisher"></div>
+                        <img src="images/lifestyle/pool-friends-2.jpg" alt="Friends enjoying KIT Non-Alc" class="founders-img" loading="lazy">
                     </div>
                     <div class="founders-content">
-                        <h2>Real Beer. Real People.</h2>
-                        <p>Rob Barrett and Will Fisher founded KIT Non-Alc Brewing in 2021 in Portland, Maine, building on the heritage of Austin Street Brewery. Our mission was simple: create authentic, flavorful non-alcoholic beer that doesn't compromise on taste or quality.</p>
-                        <p>We believe that choosing a non-alcoholic beer shouldn't mean settling for less. Every batch of KIT is crafted with the same passion and precision as the finest craft beers, using the highest quality ingredients and time-tested brewing techniques.</p>
+                        <h2>We're Here For People Who Don't Need a Drink to Belong — They Need a Drink That Belongs to Them.</h2>
+                        <p>KIT isn't just about what's missing from the can — it's about what's inside: bold flavor, exceptional craftsmanship, and a choice that aligns effortlessly with a life of intention. For the health-conscious and socially active, for parents juggling family life, or professionals chasing balance, KIT is crafted to enhance every moment — on your own terms.</p>
+                        <p>We get it — life is busy, full, and worth showing up for. Whether it's deep conversation around the fire, cheering at the game, or a family dinner that starts with chaos and ends with laughter, KIT keeps you fully in the moment. No compromises, no side effects, just the satisfaction of a great beer and the confidence of being exactly where you want to be. Because when you're Under Your Own Influence, you don't miss a thing. And neither should your beer.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Mission Section -->
-        <section class="mission-section">
+        <!-- Founder Section -->
+        <section class="partnership-section" style="background-color: #F5F0EB;">
             <div class="container">
-                <div class="mission-grid">
-                    <div class="mission-card">
-                        <div class="mission-icon" aria-label="Authenticity icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
-                                <path d="M18 24L22 28L30 20" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <h3>Authenticity</h3>
-                        <p>Real, flavorful beer that doesn't compromise on taste or quality.</p>
-                    </div>
-                    <div class="mission-card">
-                        <div class="mission-icon" aria-label="Empowerment icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <path d="M24 8V40M12 24H36" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <h3>Empowerment</h3>
-                        <p>Enjoy life on your terms, without limits or compromises.</p>
-                    </div>
-                    <div class="mission-card">
-                        <div class="mission-icon" aria-label="Connection icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="24" cy="18" r="3" fill="currentColor"/>
-                                <path d="M18 32C18 29 20.7 27 24 27C27.3 27 30 29 30 32" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <h3>Connection</h3>
-                        <p>Fully present in every moment, with friends and loved ones.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Awards Section -->
-        <section class="awards-section">
-            <div class="container">
-                <h2>Award-Winning Craft</h2>
-                <div class="awards-grid">
-                    <div class="award-badge">
-                        <div class="badge-icon"></div>
-                        <span>GIBCC First Place</span>
-                    </div>
-                    <div class="award-badge">
-                        <div class="badge-icon"></div>
-                        <span>US Open Silver Medal</span>
-                    </div>
-                    <div class="award-badge">
-                        <div class="badge-icon"></div>
-                        <span>Best of Craft Beer Awards Gold</span>
-                    </div>
-                    <div class="award-badge">
-                        <div class="badge-icon"></div>
-                        <span>DE First Place</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Partnership Section -->
-        <section class="partnership-section">
-            <div class="container">
-                <div class="partnership-grid">
-                    <div class="partnership-image">
-                        <div class="img-placeholder" aria-label="Sound Mind Live partnership event"></div>
-                    </div>
+                <div class="partnership-grid partnership-grid--reversed">
                     <div class="partnership-content">
-                        <h2>Sound Mind Live Partnership</h2>
-                        <p>KIT is proud to partner with Sound Mind Live, an organization dedicated to mental health awareness and support. We believe that enjoying a great beer should go hand-in-hand with taking care of your mental health and being fully present with those around you.</p>
-                        <p>A portion of proceeds from select KIT products support Sound Mind Live initiatives and mental health advocacy programs.</p>
+                        <h2>Meet the Founders</h2>
+                        <p>William Fisher and Rob Barrett are the co-founders of KIT Non-Alc, based in Portland, Maine. Will brings deep craft beer expertise to KIT, having co-founded Austin Street Brewery in 2012 — one of the pre-eminent craft breweries in Portland, ME — before turning his attention to reimagining what non-alcoholic beer could be.</p>
+                        <p>Together, Will and Rob set out to prove that choosing non-alcoholic doesn't mean settling for less. Drawing on years of brewing experience and a shared belief that great beer should be for everyone, they built KIT from the ground up — with real craft credentials and an uncompromising commitment to flavor.</p>
+                    </div>
+                    <div class="partnership-image">
+                        <img src="images/brand/will-headshot.jpg" alt="Will Fisher, Co-Founder of KIT NON-ALC" class="partnership-img" loading="lazy">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sustainability Section -->
-        <section class="sustainability-section">
+        <!-- Your Kind of Craft Section -->
+        <section class="sustainability-section" style="background-color: #F5F0EB;">
             <div class="container">
-                <h2>Sustainability Commitment</h2>
-                <p>We're committed to brewing responsibly. KIT uses sustainable sourcing practices for our ingredients, minimizes waste in our production process, and works to reduce our environmental impact at every step of the brewing journey.</p>
+                <h2>Your Kind of Craft</h2>
+                <p>Every batch of KIT is brewed with the same passion and precision as the finest craft beers, using the highest quality ingredients and time-tested brewing techniques. We believe that the non-alcoholic beer experience should be just as rich, complex, and satisfying as any craft beer on the shelf.</p>
             </div>
         </section>
     </main>
@@ -249,19 +179,6 @@
         </div>
     </footer>
 
-    <!-- Cart Drawer -->
-    <div class="cart-drawer">
-        <div class="cart-header">
-            <h2>Your Cart</h2>
-            <button class="cart-close" aria-label="Close cart">×</button>
-        </div>
-        <div class="cart-body">
-            <p>Your cart is empty</p>
-        </div>
-        <div class="cart-footer">
-            <button class="btn btn-primary btn-lg">Checkout</button>
-        </div>
-    </div>
 
     <!-- Mobile Menu -->
     <nav class="mobile-menu">
@@ -279,14 +196,6 @@
         </ul>
     </nav>
 
-    <!-- Search Overlay -->
-    <div class="search-overlay">
-        <div class="search-container">
-            <input type="search" class="search-input" placeholder="Search products..." aria-label="Search">
-            <button class="search-close" aria-label="Close search">×</button>
-        </div>
-        <div class="search-results"></div>
-    </div>
 
     <script src="js/main.js"></script>
 </body>

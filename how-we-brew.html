@@ -12,47 +12,41 @@
 <body>
     <!-- Announcement Bar -->
     <div class="announcement-bar">
-        <p>FREE SHIPPING ON ORDERS OF 4+ SIX-PACKS • HAVE A KIT</p>
+        <p>Now in Whole Foods Across New England!</p>
     </div>
 
     <!-- Header -->
     <header class="header">
         <div class="header-container">
-            <div class="header-left">
-                <a href="/" class="logo">
-                    <img src="images/logos/Kit_Non_Alc_Black.svg" alt="KIT Non-Alc Logo">
+            <div class="header-logo">
+                <a href="index.html" aria-label="KIT NON-ALC Home">
+                    <img src="images/logos/Kit_Non_Alc_Black.svg" alt="KIT NON-ALC">
                 </a>
             </div>
 
             <nav class="header-nav">
-                <a href="shop.html" class="nav-link">Shop</a>
-                <a href="find-kit.html" class="nav-link">Find In Store</a>
-                <div class="nav-dropdown">
-                    <button class="nav-link dropdown-toggle">Learn</button>
-                    <div class="dropdown-menu">
-                        <a href="our-story.html">Our Story</a>
-                        <a href="how-we-brew.html">How We Brew</a>
-                    </div>
-                </div>
+                <ul class="nav-links">
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="find-kit.html">Find In Store</a></li>
+                    <li class="nav-dropdown">
+                        <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Learn</button>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="our-story.html">Our Story</a></li>
+                            <li><a href="how-we-brew.html">How We Brew</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </nav>
 
-            <div class="header-right">
-                <button class="search-toggle" aria-label="Search">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/>
-                        <path d="M12 12L18 18" stroke="currentColor" stroke-width="2"/>
+            <div class="header-icons">
+                <button class="header-icon-btn menu-toggle" aria-label="Menu" aria-expanded="false">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     </svg>
-                </button>
-                <button class="cart-toggle" aria-label="Open cart">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <rect x="2" y="4" width="16" height="14" rx="1" stroke="currentColor" stroke-width="2"/>
-                        <path d="M5 4V2M15 4V2" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                </button>
-                <button class="mobile-menu-toggle" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
                 </button>
             </div>
         </div>
@@ -67,7 +61,7 @@
                 <div class="hero-eyebrow">HOW WE BREW</div>
                 <h1 class="hero-heading">Four Ingredients. No Compromises.</h1>
             </div>
-            <div class="img-placeholder" aria-label="KIT brewing process and equipment" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
+            <img src="images/brand/fridge-3.jpg" alt="KIT brewing process" class="hero-image" loading="eager" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
         </section>
 
         <!-- Process Section -->
@@ -80,7 +74,7 @@
                         <p>Our process ensures that every bottle of KIT delivers authentic craft beer taste without any compromise. We never cut corners on quality or flavor, which is why KIT stands out in the non-alcoholic beer market.</p>
                     </div>
                     <div class="process-image">
-                        <div class="img-placeholder" aria-label="Brewing kettles and fermentation tanks"></div>
+                        <img src="images/products/golden-pour-3.jpg" alt="KIT brewing process" class="process-img" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -277,19 +271,6 @@
         </div>
     </footer>
 
-    <!-- Cart Drawer -->
-    <div class="cart-drawer">
-        <div class="cart-header">
-            <h2>Your Cart</h2>
-            <button class="cart-close" aria-label="Close cart">×</button>
-        </div>
-        <div class="cart-body">
-            <p>Your cart is empty</p>
-        </div>
-        <div class="cart-footer">
-            <button class="btn btn-primary btn-lg">Checkout</button>
-        </div>
-    </div>
 
     <!-- Mobile Menu -->
     <nav class="mobile-menu">
@@ -307,14 +288,6 @@
         </ul>
     </nav>
 
-    <!-- Search Overlay -->
-    <div class="search-overlay">
-        <div class="search-container">
-            <input type="search" class="search-input" placeholder="Search products..." aria-label="Search">
-            <button class="search-close" aria-label="Close search">×</button>
-        </div>
-        <div class="search-results"></div>
-    </div>
 
     <script src="js/main.js"></script>
 </body>

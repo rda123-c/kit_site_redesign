@@ -12,47 +12,41 @@
 <body>
     <!-- Announcement Bar -->
     <div class="announcement-bar">
-        <p>FREE SHIPPING ON ORDERS OF 4+ SIX-PACKS • HAVE A KIT</p>
+        <p>Now in Whole Foods Across New England!</p>
     </div>
 
     <!-- Header -->
     <header class="header">
         <div class="header-container">
-            <div class="header-left">
-                <a href="/" class="logo">
-                    <img src="images/logos/Kit_Non_Alc_Black.svg" alt="KIT Non-Alc Logo">
+            <div class="header-logo">
+                <a href="index.html" aria-label="KIT NON-ALC Home">
+                    <img src="images/logos/Kit_Non_Alc_Black.svg" alt="KIT NON-ALC">
                 </a>
             </div>
 
             <nav class="header-nav">
-                <a href="shop.html" class="nav-link">Shop</a>
-                <a href="find-kit.html" class="nav-link">Find In Store</a>
-                <div class="nav-dropdown">
-                    <button class="nav-link dropdown-toggle">Learn</button>
-                    <div class="dropdown-menu">
-                        <a href="our-story.html">Our Story</a>
-                        <a href="how-we-brew.html">How We Brew</a>
-                    </div>
-                </div>
+                <ul class="nav-links">
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="find-kit.html">Find In Store</a></li>
+                    <li class="nav-dropdown">
+                        <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Learn</button>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="our-story.html">Our Story</a></li>
+                            <li><a href="how-we-brew.html">How We Brew</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </nav>
 
-            <div class="header-right">
-                <button class="search-toggle" aria-label="Search">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/>
-                        <path d="M12 12L18 18" stroke="currentColor" stroke-width="2"/>
+            <div class="header-icons">
+                <button class="header-icon-btn menu-toggle" aria-label="Menu" aria-expanded="false">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M3 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     </svg>
-                </button>
-                <button class="cart-toggle" aria-label="Open cart">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <rect x="2" y="4" width="16" height="14" rx="1" stroke="currentColor" stroke-width="2"/>
-                        <path d="M5 4V2M15 4V2" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                </button>
-                <button class="mobile-menu-toggle" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
                 </button>
             </div>
         </div>
@@ -68,44 +62,49 @@
             </div>
         </section>
 
-        <!-- Retailer Logo Bar -->
-        <section class="retailer-section">
-            <div class="container">
-                <div class="retailer-grid">
-                    <a href="#" class="retailer-card" target="_blank" rel="noopener noreferrer">
-                        <div class="retailer-logo-placeholder" aria-label="Amazon logo"></div>
-                        <span class="retailer-name">Amazon</span>
-                    </a>
-                    <a href="#" class="retailer-card" target="_blank" rel="noopener noreferrer">
-                        <div class="retailer-logo-placeholder" aria-label="Walmart logo"></div>
-                        <span class="retailer-name">Walmart</span>
-                    </a>
-                    <a href="#" class="retailer-card" target="_blank" rel="noopener noreferrer">
-                        <div class="retailer-logo-placeholder" aria-label="Whole Foods logo"></div>
-                        <span class="retailer-name">Whole Foods</span>
-                    </a>
-                    <a href="#" class="retailer-card" target="_blank" rel="noopener noreferrer">
-                        <div class="retailer-logo-placeholder" aria-label="Thrive Market logo"></div>
-                        <span class="retailer-name">Thrive Market</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
         <!-- Beer Finder Section -->
         <section class="beer-finder-section">
             <div class="container">
                 <div class="beer-finder-content">
-                    <h2>LOCAL RETAILERS</h2>
-                    <p class="finder-subtext">Enter your zip code to find KIT at stores near you</p>
-                    <div class="finder-iframe-container">
+                    <div class="finder-iframe-container" id="finderContainer" style="max-height: 180px; overflow: hidden; transition: max-height 0.5s ease; cursor: pointer; position: relative;">
                         <iframe
-                            data-src="https://finder.vtinfo.com/finder/web/v2/iframe?custID=K1P"
+                            id="finderIframe"
+                            src="https://finder.vtinfo.com/finder/web/v2/iframe?custID=K1P"
+                            width="100%"
+                            height="1100"
+                            frameborder="0"
                             title="KIT Beer Store Locator"
-                            aria-label="Store finder map and location search">
+                            aria-label="Store finder map and location search"
+                            style="border: none; width: 100%; min-height: 1100px; pointer-events: none;">
                         </iframe>
+                        <div id="finderOverlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; cursor: pointer;"></div>
                     </div>
-                    <p class="finder-note">Note: The store locator iframe will be embedded through Shopline integration</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop Online Fallback -->
+        <section class="shop-online-section">
+            <div class="container">
+                <div class="shop-online-content">
+                    <h2>Not in Your Local Store? Shop Online!</h2>
+                    <div class="retailer-buttons">
+                        <a href="#" class="retailer-btn retailer-amazon" target="_blank" rel="noopener noreferrer" aria-label="Buy on Amazon">
+                            <img class="retailer-logo" src="images/retailers/amazon.svg" alt="Amazon">
+                        </a>
+                        <a href="#" class="retailer-btn retailer-walmart" target="_blank" rel="noopener noreferrer" aria-label="Buy on Walmart">
+                            <img class="retailer-logo" src="images/retailers/walmart.svg" alt="Walmart">
+                        </a>
+                        <a href="#" class="retailer-btn retailer-wholefoods" target="_blank" rel="noopener noreferrer" aria-label="Buy at Whole Foods">
+                            <img class="retailer-logo" src="images/retailers/wholefoods.svg" alt="Whole Foods">
+                        </a>
+                        <a href="#" class="retailer-btn retailer-thrive" target="_blank" rel="noopener noreferrer" aria-label="Buy on Thrive Market">
+                            <img class="retailer-logo" src="images/retailers/thrive.svg" alt="Thrive Market">
+                        </a>
+                        <a href="#" class="retailer-btn retailer-instacart" target="_blank" rel="noopener noreferrer" aria-label="Buy on Instacart">
+                            <img class="retailer-logo" src="images/retailers/instacart.svg" alt="Instacart">
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -185,19 +184,6 @@
         </div>
     </footer>
 
-    <!-- Cart Drawer -->
-    <div class="cart-drawer">
-        <div class="cart-header">
-            <h2>Your Cart</h2>
-            <button class="cart-close" aria-label="Close cart">×</button>
-        </div>
-        <div class="cart-body">
-            <p>Your cart is empty</p>
-        </div>
-        <div class="cart-footer">
-            <button class="btn btn-primary btn-lg">Checkout</button>
-        </div>
-    </div>
 
     <!-- Mobile Menu -->
     <nav class="mobile-menu">
@@ -215,14 +201,6 @@
         </ul>
     </nav>
 
-    <!-- Search Overlay -->
-    <div class="search-overlay">
-        <div class="search-container">
-            <input type="search" class="search-input" placeholder="Search products..." aria-label="Search">
-            <button class="search-close" aria-label="Close search">×</button>
-        </div>
-        <div class="search-results"></div>
-    </div>
 
     <script src="js/main.js"></script>
 </body>
