@@ -2,19 +2,11 @@
 
 .hero {
   position: relative;
-  min-height: 100vh;
-  min-height: 600px;
+  min-height: 70vh;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* Mobile responsive adjustments for hero */
-@media (max-width: 767px) {
-  .hero {
-    min-height: 400px;
-  }
 }
 
 .hero-content {
@@ -1736,5 +1728,705 @@
 @media (min-width: 768px) {
   .newsletter-section {
     padding: var(--space-4xl) 0;
+  }
+}
+
+
+/* ==================================================================
+   MOBILE-FIRST RESPONSIVE OVERHAUL
+   All fixes for screens < 768px
+   ================================================================== */
+
+@media (max-width: 767px) {
+
+  /* ---- GLOBAL MOBILE ---- */
+  .container {
+    padding: 0 var(--space-lg);
+  }
+
+  /* ---- ANNOUNCEMENT BAR ---- */
+  .announcement-bar {
+    font-size: 0.7rem;
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  /* ---- HEADER ---- */
+  .header {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .header-container {
+    padding: 0;
+  }
+
+  .header-logo {
+    max-width: 70px;
+  }
+
+  /* ---- HOMEPAGE HERO ---- */
+  .hero {
+    min-height: 50vh;
+    min-height: 350px;
+  }
+
+  .hero-content {
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  .hero-headline {
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+  }
+
+  .hero-subtext {
+    font-size: var(--fs-body-sm);
+  }
+
+  .hero .btn {
+    font-size: var(--fs-body-sm);
+    padding: var(--space-sm) var(--space-xl);
+  }
+
+  /* ---- AWARDS SECTION ---- */
+  .awards-section {
+    padding: var(--space-md) var(--space-lg) var(--space-sm);
+  }
+
+  .awards-headline {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .awards-container {
+    gap: var(--space-md);
+  }
+
+  .award img {
+    height: 55px;
+  }
+
+  /* ---- FEATURED PRODUCTS (homepage) ---- */
+  .featured-products {
+    padding-block: var(--space-2xl) var(--space-sm);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-xl);
+  }
+
+  .section-headline {
+    font-size: var(--fs-h3);
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  .product-image {
+    height: 180px;
+  }
+
+  .product-info {
+    padding: var(--space-md);
+  }
+
+  .product-name {
+    font-size: 1rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .product-descriptor {
+    font-size: 0.65rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .product-price {
+    font-size: var(--fs-body-sm);
+    margin-bottom: var(--space-sm);
+  }
+
+  .product-card .btn {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.7rem;
+  }
+
+  /* ---- LIFESTYLE SECTION ---- */
+  .lifestyle-section {
+    padding-block: var(--space-2xl);
+  }
+
+  .lifestyle-headline {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-xl);
+    line-height: var(--lh-body);
+  }
+
+  .lifestyle-images {
+    gap: var(--space-md);
+  }
+
+  .lifestyle-image {
+    height: 220px;
+  }
+
+  /* ---- BRAND STORY ---- */
+  .brand-story {
+    padding: var(--space-2xl) 0;
+  }
+
+  .brand-story-layout {
+    gap: var(--space-xl);
+  }
+
+  .brand-story-image {
+    height: 250px;
+  }
+
+  .brand-story-content {
+    padding: var(--space-md) var(--space-lg);
+    max-width: 100%;
+  }
+
+  .brand-story-content .section-eyebrow {
+    font-size: 0.65rem;
+  }
+
+  .brand-story-content .section-headline {
+    font-size: var(--fs-h4);
+  }
+
+  .brand-story-text {
+    font-size: var(--fs-body-sm);
+  }
+
+  /* ---- INSTAGRAM SECTION ---- */
+  .instagram-section {
+    padding: var(--space-2xl) 0;
+  }
+
+  .instagram-fallback img {
+    height: 220px;
+  }
+
+  /* ---- NEWSLETTER (all pages) ---- */
+  .newsletter,
+  .newsletter-section {
+    padding: var(--space-xl) 0;
+  }
+
+  .newsletter-headline,
+  .newsletter-content h2 {
+    font-size: var(--fs-h4);
+  }
+
+  .newsletter-form {
+    max-width: 100%;
+    padding: 0 var(--space-md);
+  }
+
+  .newsletter-form input[type="email"] {
+    font-size: var(--fs-body-sm);
+  }
+
+  /* ---- SHOP / PDP ---- */
+  .product-section {
+    padding: var(--space-xl) 0 var(--space-md);
+  }
+
+  .product-container {
+    gap: var(--space-xl);
+    padding: 0 var(--space-lg);
+  }
+
+  .gallery-main img,
+  .product-gallery-main img {
+    height: 300px;
+  }
+
+  .gallery-main .img-placeholder {
+    height: 300px;
+  }
+
+  .gallery-thumbnails {
+    gap: var(--space-xs);
+  }
+
+  .thumbnail img,
+  .gallery-thumb img,
+  .product-gallery-thumb img {
+    height: 70px;
+  }
+
+  .thumbnail .img-placeholder {
+    height: 70px;
+  }
+
+  .product-eyebrow {
+    font-size: 0.65rem;
+  }
+
+  h1 {
+    font-size: var(--fs-h3);
+  }
+
+  .flavor-descriptor {
+    font-size: 0.8rem;
+  }
+
+  .variant-selector {
+    margin-block: var(--space-md);
+  }
+
+  .variant-btn {
+    padding: var(--space-xs) var(--space-md);
+    font-size: 0.7rem;
+  }
+
+  .price {
+    font-size: 1.25rem;
+  }
+
+  .quantity-selector {
+    margin-bottom: var(--space-md);
+  }
+
+  .qty-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .qty-input {
+    width: 48px;
+  }
+
+  .add-to-cart {
+    font-size: var(--fs-body-sm);
+    padding: var(--space-md);
+  }
+
+  .style-description {
+    font-size: var(--fs-body-sm);
+  }
+
+  .retailer-section {
+    margin-top: var(--space-xl);
+  }
+
+  .retailer-buttons {
+    gap: var(--space-sm);
+  }
+
+  .retailer-btn {
+    padding: 12px 16px;
+    min-height: 46px;
+    font-size: var(--fs-body-sm);
+  }
+
+  .retailer-logo {
+    height: 18px;
+  }
+
+  .tabs {
+    margin-top: var(--space-xl);
+  }
+
+  .tab-nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tab-button {
+    padding: var(--space-md) var(--space-lg);
+    font-size: 0.7rem;
+    white-space: nowrap;
+  }
+
+  .tab-content,
+  .tab-pane {
+    padding: var(--space-lg) 0;
+  }
+
+  .nutrition-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+
+  .nutrition-item {
+    padding: var(--space-md);
+  }
+
+  .nutrition-value {
+    font-size: 1.5rem;
+  }
+
+  .nutrition-label {
+    font-size: 0.6rem;
+  }
+
+  /* ---- PDP AWARDS ---- */
+  .pdp-awards {
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  .pdp-awards-heading {
+    font-size: var(--fs-h4);
+    white-space: normal;
+  }
+
+  .pdp-awards-layout .awards-container {
+    gap: var(--space-md);
+  }
+
+  .pdp-awards .award img {
+    height: 55px;
+  }
+
+  /* ---- FIND KIT ---- */
+  .hero-section {
+    padding-block: var(--space-md);
+  }
+
+  .hero-heading {
+    font-size: var(--fs-h3);
+    margin-bottom: var(--space-md);
+  }
+
+  .hero-subtext {
+    font-size: var(--fs-body-sm);
+  }
+
+  .beer-finder-section {
+    padding: var(--space-sm) 0 0;
+  }
+
+  .beer-finder-content h2 {
+    font-size: var(--fs-h4);
+  }
+
+  .finder-subtext {
+    font-size: var(--fs-body-sm);
+    margin-bottom: var(--space-lg);
+  }
+
+  .finder-iframe-container {
+    border-radius: var(--radius-md);
+  }
+
+  .shop-online-section {
+    padding: var(--space-lg) 0;
+  }
+
+  .shop-online-content h2 {
+    font-size: var(--fs-h4);
+    margin-bottom: var(--space-lg);
+  }
+
+  .shop-online-content .retailer-buttons {
+    flex-direction: column;
+    padding: 0 var(--space-lg);
+    max-width: 100%;
+  }
+
+  .shop-online-content .retailer-btn {
+    width: 100%;
+  }
+
+  /* ---- OUR STORY ---- */
+  .hero-section.hero-image-bg {
+    min-height: 35vh;
+    padding-block: var(--space-2xl);
+  }
+
+  .hero-section.hero-image-bg .hero-heading {
+    font-size: var(--fs-h3);
+    color: var(--kit-white);
+  }
+
+  .hero-section.hero-image-bg .hero-eyebrow {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .founders-section {
+    padding: var(--space-2xl) 0;
+  }
+
+  .founders-grid {
+    gap: var(--space-xl);
+  }
+
+  .founders-image {
+    height: 250px;
+  }
+
+  .founders-content {
+    padding: var(--space-md) var(--space-lg);
+    max-width: 100%;
+  }
+
+  .founders-content h2 {
+    font-size: var(--fs-h4);
+  }
+
+  .founders-content p {
+    font-size: var(--fs-body-sm);
+  }
+
+  .mission-section {
+    padding: var(--space-2xl) 0;
+  }
+
+  .mission-grid {
+    gap: var(--space-xl);
+  }
+
+  .mission-card {
+    padding: var(--space-lg);
+  }
+
+  .mission-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .mission-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .mission-card p {
+    font-size: var(--fs-body-sm);
+  }
+
+  .partnership-section {
+    padding: var(--space-2xl) 0;
+  }
+
+  .partnership-grid {
+    gap: var(--space-xl);
+  }
+
+  .partnership-image {
+    height: 250px;
+  }
+
+  .partnership-content {
+    padding: var(--space-md) var(--space-lg);
+    max-width: 100%;
+  }
+
+  .partnership-content h2 {
+    font-size: var(--fs-h4);
+  }
+
+  .partnership-content p {
+    font-size: var(--fs-body-sm);
+  }
+
+  .sustainability-section {
+    padding: var(--space-2xl) 0;
+  }
+
+  .sustainability-section h2 {
+    font-size: var(--fs-h4);
+    margin-bottom: var(--space-lg);
+  }
+
+  .sustainability-section p {
+    font-size: var(--fs-body-sm);
+    padding: 0 var(--space-lg);
+  }
+
+  /* ---- HOW WE BREW ---- */
+  .process-section {
+    padding: var(--space-2xl) 0;
+  }
+
+  .process-grid {
+    gap: var(--space-xl);
+  }
+
+  .process-content {
+    padding: var(--space-md) var(--space-lg);
+    max-width: 100%;
+  }
+
+  .process-content h2 {
+    font-size: var(--fs-h4);
+  }
+
+  .process-content p {
+    font-size: var(--fs-body-sm);
+  }
+
+  .process-image {
+    height: 250px;
+  }
+
+  .ingredients-section {
+    padding: var(--space-2xl) 0;
+  }
+
+  .ingredients-section h2 {
+    font-size: var(--fs-h4);
+    margin-bottom: var(--space-xl);
+  }
+
+  .ingredients-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .ingredient-card {
+    padding: var(--space-lg);
+  }
+
+  .ingredient-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.75rem;
+  }
+
+  .ingredient-card h3 {
+    font-size: 1rem;
+  }
+
+  .ingredient-card p {
+    font-size: 0.75rem;
+  }
+
+  .quality-section {
+    padding: var(--space-2xl) 0;
+  }
+
+  .quality-section h2 {
+    font-size: var(--fs-h4);
+    margin-bottom: var(--space-lg);
+  }
+
+  .quality-section p {
+    font-size: var(--fs-body-sm);
+    padding: 0 var(--space-lg);
+  }
+
+  .trust-badges-section {
+    padding: var(--space-xl) 0;
+  }
+
+  .badges-row {
+    gap: var(--space-md);
+  }
+
+  .badges-row .trust-badge {
+    min-width: 80px;
+    padding: var(--space-sm);
+    font-size: 0.7rem;
+  }
+
+  .badge-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .badge-icon svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* ---- FAQ ---- */
+  .faq-section {
+    padding: var(--space-xl) 0;
+  }
+
+  .faq-category-nav {
+    margin-bottom: var(--space-xl);
+    padding: var(--space-md) 0;
+  }
+
+  .category-pill {
+    padding: var(--space-xs) var(--space-md);
+    font-size: 0.75rem;
+  }
+
+  .faq-category {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .faq-question {
+    padding: var(--space-md) 0;
+    font-size: var(--fs-body-sm);
+  }
+
+  .faq-answer {
+    font-size: var(--fs-body-sm);
+  }
+
+  /* ---- CONTACT ---- */
+  .contact-section {
+    padding: var(--space-xl) 0 var(--space-2xl);
+  }
+
+  .contact-grid {
+    gap: var(--space-xl);
+  }
+
+  .contact-form-wrapper {
+    padding: 0;
+  }
+
+  .contact-form .btn {
+    padding: var(--space-md);
+    font-size: var(--fs-body-sm);
+  }
+
+  .contact-info-wrapper {
+    padding: var(--space-md) 0;
+  }
+
+  .contact-info-box h3 {
+    font-size: var(--fs-h4);
+    margin-bottom: var(--space-lg);
+  }
+
+  .contact-info-item {
+    margin-bottom: var(--space-lg);
+  }
+
+  /* ---- FOOTER ---- */
+  .footer {
+    padding: var(--space-xl) var(--space-md) var(--space-md);
+  }
+
+  .footer-columns,
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
+  }
+
+  .footer-column h3 {
+    font-size: var(--fs-body-sm);
+    margin-bottom: var(--space-sm);
+  }
+
+  .footer-column a {
+    font-size: 0.75rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .footer-bottom {
+    padding-top: var(--space-md);
+    margin-top: var(--space-lg);
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .copyright {
+    font-size: 0.75rem;
   }
 }
