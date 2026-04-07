@@ -735,6 +735,28 @@
   }
 }
 
+/* Primary (big) retailer button - full width, larger */
+.retailer-btn--primary {
+  flex: 1 1 100% !important;
+  min-height: 72px;
+  padding: 20px 24px;
+  font-size: 1.125rem;
+  box-shadow: var(--shadow-md);
+}
+
+.retailer-btn--primary .retailer-logo {
+  height: 32px;
+  max-width: 200px;
+}
+
+.retailer-btn--primary.retailer-amazon .retailer-logo {
+  height: 36px;
+}
+
+.retailer-btn--primary:hover {
+  box-shadow: var(--shadow-lg);
+}
+
 .tabs {
   margin-top: var(--space-4xl);
   border-top: 1px solid var(--kit-medium-gray);
@@ -841,6 +863,57 @@
 .reviews-section {
   padding-block: var(--space-4xl);
   text-align: center;
+}
+
+/* Meet the Founders Tab */
+.founders-tab-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .founders-tab-layout {
+    grid-template-columns: 280px 1fr;
+  }
+}
+
+.founders-tab-image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+.founders-tab-content h3 {
+  font-family: var(--font-family-serif);
+  font-size: var(--fs-h3);
+  margin-bottom: var(--space-lg);
+  color: var(--kit-charcoal);
+}
+
+.founders-tab-content p {
+  line-height: var(--lh-loose);
+  color: var(--kit-dark-gray);
+  margin-bottom: var(--space-md);
+}
+
+.founders-tab-link {
+  margin-top: var(--space-lg);
+  font-weight: var(--fw-semi-bold);
+}
+
+.founders-tab-link a {
+  color: var(--kit-blonde-blue);
+  text-decoration: none;
+  font-size: var(--fs-subhead);
+  transition: color var(--transition-base);
+}
+
+.founders-tab-link a:hover {
+  color: var(--kit-golden-orange);
+  text-decoration: underline;
 }
 
 
