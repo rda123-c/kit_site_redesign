@@ -655,8 +655,8 @@
 }
 
 .retailer-buttons {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: var(--space-md);
 }
 
@@ -727,18 +727,13 @@
 
 @media (min-width: 768px) {
   .retailer-buttons {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .retailer-btn {
-    flex: 1 1 calc(50% - var(--space-md));
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-/* Primary (full-width) retailer button - same height as others */
+/* Primary (full-width) retailer button - spans full row */
 .retailer-buttons .retailer-btn.retailer-btn--primary {
-  flex: 1 1 100% !important;
-  width: 100% !important;
+  grid-column: 1 / -1;
 }
 
 .tabs {
