@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/about-pages.css">
 </head>
-<body>
+<body class="kit-about-page">
     <!-- Announcement Bar -->
     <div class="announcement-bar">
         <p>Now in Whole Foods Across New England!</p>
@@ -32,7 +33,7 @@
                         <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Learn</button>
                         <ul class="nav-dropdown-menu">
                             <li><a href="our-story.html">Our Story</a></li>
-                            <li><a href="how-we-brew.html">How We Brew</a></li>
+                            <li><a href="how-we-brew.html" class="active">How We Brew</a></li>
                             <li><a href="faq.html">FAQ</a></li>
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
@@ -52,149 +53,152 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- Hero Section -->
-        <section class="hero-section hero-image-bg">
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <div class="hero-eyebrow">HOW WE BREW</div>
-                <h1 class="hero-heading">Four Ingredients. No Compromises.</h1>
+    <!-- Main Content (from handoff design) -->
+    <main class="about-main">
+
+        <!-- BREW HERO -->
+        <section class="brew-hero">
+            <div class="brew-hero-grain"></div>
+            <div class="brew-hero-inner">
+                <span class="brew-hero-eyebrow">How We Brew</span>
+                <h1 class="brew-hero-title">
+                    Four ingredients.<br />
+                    <em>No compromises.</em>
+                </h1>
+                <p class="brew-hero-sub">
+                    We start with the finest quality malt, hops, water, and yeast to create our base beer.
+                    Using traditional brewing methods combined with advanced fermentation techniques, we craft a flavorful beer
+                    and then gently remove the alcohol while preserving the complex flavors and aromas that make beer special.
+                    No corner cutting, ever.
+                </p>
+                <a class="brew-hero-scroll" href="#brew" aria-label="Scroll to the brew breakdown">
+                    <span>Explore the craft</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M12 5v14M6 13l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
             </div>
-            <img src="images/brand/fridge-3.jpg" alt="KIT brewing process" class="hero-image" loading="eager" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
         </section>
 
-        <!-- Process Section -->
-        <section class="process-section">
-            <div class="container">
-                <div class="process-grid">
-                    <div class="process-content">
-                        <h2>Our Brewing Process</h2>
-                        <p>We start with the finest quality malt, hops, water, and yeast to create our base beer. Using traditional brewing methods combined with advanced fermentation techniques, we craft a flavorful beer and then gently remove the alcohol while preserving the complex flavors and aromas that make beer special.</p>
-                        <p>Our process ensures that every can of Kit delivers authentic craft beer taste without any compromise. No corner cutting, ever.</p>
+        <!-- MEET THE BREW -->
+        <section class="brew" id="brew">
+            <div class="brew-header">
+                <div class="eyebrow">The Breakdown</div>
+                <h2>Every batch, <em>the hard way.</em></h2>
+                <p>Click an ingredient to see how it shapes the final beer.</p>
+            </div>
+            <div class="brew-stage">
+                <div class="brew-visual">
+                    <div class="brew-can">
+                        <img src="images/products/blonde-can-1.jpg" alt="Kit Blonde can" />
                     </div>
-                    <div class="process-image">
-                        <img src="images/products/golden-pour-3.jpg" alt="KIT brewing process" class="process-img" loading="lazy">
+                    <div class="brew-orbit" id="brewOrbit">
+                        <button class="brew-dot" data-i="0" data-angle="0" aria-label="Water">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3c-4 5-6 8-6 12a6 6 0 0012 0c0-4-2-7-6-12z" stroke="currentColor" stroke-width="1.6"/></svg>
+                        </button>
+                        <button class="brew-dot" data-i="1" data-angle="90" aria-label="Malt">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M8 7c0 2 1 3 4 3s4-1 4-3-1-3-4-3-4 1-4 3zM8 13c0 2 1 3 4 3s4-1 4-3-1-3-4-3-4 1-4 3z" stroke="currentColor" stroke-width="1.6"/></svg>
+                        </button>
+                        <button class="brew-dot" data-i="2" data-angle="180" aria-label="Hops">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M12 4l3 4-3 2-3-2 3-4zM12 10l3 4-3 2-3-2 3-4zM12 16l3 4-3 0-3 0 3-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                        </button>
+                        <button class="brew-dot" data-i="3" data-angle="270" aria-label="Yeast">
+                            <svg viewBox="0 0 24 24" fill="none"><circle cx="8" cy="9" r="3" stroke="currentColor" stroke-width="1.6"/><circle cx="15" cy="15" r="3" stroke="currentColor" stroke-width="1.6"/><circle cx="16" cy="8" r="2" stroke="currentColor" stroke-width="1.6"/></svg>
+                        </button>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Ingredients Section -->
-        <section class="ingredients-section">
-            <div class="container">
-                <h2>Four Essential Ingredients</h2>
-                <div class="ingredients-grid">
-                    <div class="ingredient-card">
-                        <div class="ingredient-icon" aria-label="Water droplet icon">
-                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                                <path d="M32 8C32 8 20 24 20 36C20 44.8366 25.3726 52 32 52C38.6274 52 44 44.8366 44 36C44 24 32 8 32 8Z" stroke="currentColor" stroke-width="2" fill="none"/>
-                            </svg>
-                        </div>
-                        <h3>Water</h3>
+                <div class="brew-info" id="brewInfo">
+                    <div class="brew-info-item active" data-i="0">
+                        <div class="tag">01 · Water</div>
+                        <h3>Water.</h3>
                         <p>Pure, clean water is the foundation of every great beer, making up the majority of our product.</p>
                     </div>
-                    <div class="ingredient-card">
-                        <div class="ingredient-icon" aria-label="Grain icon">
-                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                                <rect x="20" y="12" width="8" height="40" rx="4" stroke="currentColor" stroke-width="2"/>
-                                <rect x="32" y="10" width="8" height="42" rx="4" stroke="currentColor" stroke-width="2"/>
-                                <rect x="44" y="14" width="8" height="38" rx="4" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <h3>Malt</h3>
+                    <div class="brew-info-item" data-i="1">
+                        <div class="tag">02 · Malt</div>
+                        <h3>Malt.</h3>
                         <p>Premium malt grains provide the complex flavors, aromas, and body that define our beer's character.</p>
                     </div>
-                    <div class="ingredient-card">
-                        <div class="ingredient-icon" aria-label="Hop cone icon">
-                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                                <path d="M32 12L38 20L32 28L26 20Z" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <path d="M32 28L38 36L32 44L26 36Z" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <path d="M32 44L38 52L32 60L26 52Z" stroke="currentColor" stroke-width="2" fill="none"/>
-                            </svg>
-                        </div>
-                        <h3>Hops</h3>
+                    <div class="brew-info-item" data-i="2">
+                        <div class="tag">03 · Hops</div>
+                        <h3>Hops.</h3>
                         <p>Hops contribute bitterness, aroma, and flavor. We carefully select varieties to create our distinctive taste profiles.</p>
                     </div>
-                    <div class="ingredient-card">
-                        <div class="ingredient-icon" aria-label="Yeast cell icon">
-                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                                <circle cx="32" cy="32" r="18" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <circle cx="24" cy="26" r="4" stroke="currentColor" stroke-width="2" fill="currentColor"/>
-                                <circle cx="40" cy="26" r="4" stroke="currentColor" stroke-width="2" fill="currentColor"/>
-                                <circle cx="32" cy="42" r="4" stroke="currentColor" stroke-width="2" fill="currentColor"/>
-                            </svg>
-                        </div>
-                        <h3>Yeast</h3>
+                    <div class="brew-info-item" data-i="3">
+                        <div class="tag">04 · Yeast</div>
+                        <h3>Yeast.</h3>
                         <p>Our specially selected yeast strains ferment our beer to perfection, creating the flavors you love.</p>
                     </div>
+                    <button class="brew-next" id="brewNext" type="button">
+                        <span class="brew-next-label">Next ingredient</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <svg width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M24 40c10-6 14-14 14-22a6 6 0 00-6-6c-3 0-6 2-8 5-2-3-5-5-8-5a6 6 0 00-6 6c0 8 4 16 14 22z" fill="none"/>
+                        <path d="M24 16v22M24 22c-3-2-6-2-8 0M24 28c3-2 6-2 8 0"/>
+                    </svg>
+                    <span>Vegan Friendly</span>
+                </div>
+                <div class="trust-badge">
+                    <svg width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M24 8v32M24 12c-3 2-6 3-8 3M24 18c-4 2-8 3-11 3M24 24c-5 2-10 3-14 3M24 12c3 2 6 3 8 3M24 18c4 2 8 3 11 3M24 24c5 2 10 3 14 3"/>
+                        <path d="M10 38l28-28" stroke-width="2.5"/>
+                    </svg>
+                    <span>Gluten Removed</span>
+                </div>
+                <div class="trust-badge">
+                    <svg width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 6h12v8a6 6 0 01-6 6 6 6 0 01-6-6V6z"/>
+                        <path d="M14 40h20M20 20v20M28 20v20"/>
+                        <path d="M10 10l28 28" stroke-width="2.5"/>
+                    </svg>
+                    <span>Non-Alcoholic</span>
+                </div>
+                <div class="trust-badge">
+                    <svg width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 10h12v4l-2 2h2v22a4 4 0 01-4 4h-4a4 4 0 01-4-4V16h2l-2-2v-4z"/>
+                        <path d="M10 10l28 28" stroke-width="2.5"/>
+                    </svg>
+                    <span>Dairy Free</span>
+                </div>
+                <div class="trust-badge">
+                    <svg width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="18" y="8" width="12" height="34" rx="2"/>
+                        <path d="M18 18h12"/>
+                        <path d="M22 14h4" stroke-width="1.5"/>
+                        <text x="24" y="32" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="700" stroke="none" fill="currentColor">0.5%</text>
+                    </svg>
+                    <span>&lt;0.5% ABV</span>
+                </div>
+            </div>
+
+            <!-- Quality Statement -->
+            <div class="brew-quality">
+                <h3>Beyond the Buzz.</h3>
+                <p>Non-alcoholic beer doesn't mean inferior beer. At Kit, we've mastered the art of removing alcohol while preserving all the flavor complexity, aroma, and satisfaction you expect from a premium craft beer. Every batch is crafted with the same dedication and attention to detail as traditional craft beers. Your choice to drink non-alcoholic should never be a compromise.</p>
+            </div>
+        </section>
+
+        <!-- CLOSING -->
+        <section class="closing">
+            <div class="closing-bg"></div>
+            <div class="closing-inner">
+                <h2>From Maine, <em>under your own influence.</em></h2>
+                <p>A beer that doesn't ask you to compromise — on flavor, on how you feel, or on how you live. That's the whole idea.</p>
+                <div class="cta-row">
+                    <a href="shop.html" class="cta primary">Shop the Lineup</a>
+                    <a href="our-story.html" class="cta ghost">Read Our Story</a>
                 </div>
             </div>
         </section>
 
-        <!-- Quality Section -->
-        <section class="quality-section">
-            <div class="container">
-                <h2>Beyond the Buzz</h2>
-                <p>Non-alcoholic beer doesn't mean inferior beer. At KIT, we've mastered the art of removing alcohol while preserving all the flavor complexity, aroma, and satisfaction you expect from a premium craft beer. Our brewing process respects the beer itself, ensuring that what ends up in your glass is nothing short of exceptional.</p>
-                <p>Every batch is crafted with the same dedication and attention to detail as traditional craft beers. We believe that your choice to drink non-alcoholic should never be a compromise on quality, taste, or the overall beer experience.</p>
-            </div>
-        </section>
-
-        <!-- Trust Badges Section -->
-        <section class="trust-badges-section">
-            <div class="container">
-                <div class="badges-row">
-                    <div class="trust-badge">
-                        <div class="badge-icon" aria-label="Vegan friendly icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2"/>
-                                <path d="M24 14L28 22H20Z" stroke="currentColor" stroke-width="2" fill="currentColor"/>
-                                <path d="M18 28C18 24 21 22 24 22C27 22 30 24 30 28" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <span>Vegan Friendly</span>
-                    </div>
-                    <div class="trust-badge">
-                        <div class="badge-icon" aria-label="Gluten removed icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2"/>
-                                <path d="M24 14V34M16 24H32" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <span>Gluten Removed</span>
-                    </div>
-                    <div class="trust-badge">
-                        <div class="badge-icon" aria-label="Non-alcoholic icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2"/>
-                                <path d="M20 18H24C26 18 27 19 27 21C27 23 26 24 24 24H20" stroke="currentColor" stroke-width="2"/>
-                                <path d="M20 24H25C27 24 28 25 28 27C28 29 27 30 25 30H20" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <span>Non-Alcoholic</span>
-                    </div>
-                    <div class="trust-badge">
-                        <div class="badge-icon" aria-label="Dairy free icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2"/>
-                                <path d="M28 16L16 32M16 16L28 32" stroke="currentColor" stroke-width="3"/>
-                            </svg>
-                        </div>
-                        <span>Dairy Free</span>
-                    </div>
-                    <div class="trust-badge">
-                        <div class="badge-icon" aria-label="Low ABV icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                                <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2"/>
-                                <path d="M24 16L22 24H26L24 32" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <span>&lt;0.5% ABV</span>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- Newsletter Section -->
@@ -271,7 +275,6 @@
         </div>
     </footer>
 
-
     <!-- Mobile Menu -->
     <nav class="mobile-menu">
         <div class="mobile-menu-header">
@@ -288,7 +291,7 @@
         </ul>
     </nav>
 
-
     <script src="js/main.js"></script>
+    <script src="js/about-pages.js"></script>
 </body>
 </html>

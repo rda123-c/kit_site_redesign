@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/about-pages.css">
 </head>
-<body>
+<body class="kit-about-page">
     <!-- Announcement Bar -->
     <div class="announcement-bar">
         <p>Now in Whole Foods Across New England!</p>
@@ -31,7 +32,7 @@
                     <li class="nav-dropdown">
                         <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Learn</button>
                         <ul class="nav-dropdown-menu">
-                            <li><a href="our-story.html">Our Story</a></li>
+                            <li><a href="our-story.html" class="active">Our Story</a></li>
                             <li><a href="how-we-brew.html">How We Brew</a></li>
                             <li><a href="faq.html">FAQ</a></li>
                             <li><a href="contact.html">Contact</a></li>
@@ -52,57 +53,194 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- Hero Section -->
-        <section class="hero-section hero-image-bg">
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <div class="hero-eyebrow">OUR STORY</div>
-                <h1 class="hero-heading">Under Your Own Influence.</h1>
+    <!-- Main Content (from handoff design) -->
+    <main class="about-main">
+
+        <!-- HERO -->
+        <section class="hero" id="hero">
+            <div class="hero-bg"></div>
+            <canvas class="hero-particles" id="heroParticles" aria-hidden="true"></canvas>
+            <div class="hero-grain"></div>
+
+            <div class="hero-inner">
+                <span class="hero-eyebrow">Our Story · Portland, Maine</span>
+                <h1 class="hero-title" aria-label="Real craft beer, without the buzz.">
+                    <span class="line"><span class="word w0">Real&nbsp;</span><span class="word w1">craft</span></span>
+                    <span class="line"><span class="word i w2">beer,</span></span>
+                    <span class="line"><span class="word w3">without&nbsp;</span><span class="word w4">the&nbsp;</span><span class="word red w5">buzz.</span></span>
+                </h1>
+                <div class="hero-row">
+                    <p class="hero-sub">
+                        Kit was founded in 2021 by craft brewers who refused
+                        to accept that going non-alc meant giving anything up,
+                        or following the pack. Built for anyone living
+                        <em>Under Your Own Influence</em>.
+                    </p>
+                    <div class="hero-can">
+                        <img src="images/products/blonde-can-1.jpg" alt="Kit Blonde can" />
+                    </div>
+                    <div class="hero-meta">
+                        <span>Founded</span>
+                        <strong>2021</strong>
+                        <span style="margin-top:.5rem;">Portland, ME</span>
+                    </div>
+                </div>
             </div>
-            <img src="images/brand/fridge-1.jpg" alt="KIT NON-ALC in the fridge" class="hero-image" loading="eager" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+
+            <div class="scroll-cue">Scroll</div>
         </section>
 
-        <!-- Manifesto Section -->
-        <section class="founders-section">
-            <div class="container">
-                <div class="founders-grid">
-                    <div class="founders-image">
-                        <img src="images/lifestyle/pool-friends-2.jpg" alt="Friends enjoying KIT Non-Alc" class="founders-img" loading="lazy">
-                    </div>
-                    <div class="founders-content">
-                        <h2>For People Who Don't Need a Drink to Belong — They Need a Drink That Belongs to Them.</h2>
-                        <p>Kit isn't about what's missing from the can — it's about what's inside: bold flavor, exceptional craftsmanship, and a choice that goes against the grain. No compromises, just great beer and the confidence to be exactly who you want to be. Because when you're Under Your Own Influence, you do things your way.</p>
-                        <p>We get it — life is busy, full, and worth showing up for. Whether it's conversation around the fire, cheering at the game, or a family dinner that starts with chaos and ends with laughter, Kit keeps you in the moment, surrounded by what energizes you.</p>
-                    </div>
+        <!-- INTRO pull quote -->
+        <section class="intro">
+            <div class="intro-eyebrow">The short version</div>
+            <p>
+                After a decade brewing full-strength beer at
+                <em>Austin Street</em>, Will wasn't willing to accept the
+                trade-off every other NA beer forced on him. Great craft
+                flavor, or no alcohol — pick one. He refused. So he
+                <em>made a beer that didn't require compromising either.</em>
+            </p>
+        </section>
+
+        <!-- TIMELINE -->
+        <section class="timeline" id="timeline">
+            <div class="timeline-header">
+                <h2>The <em>long</em> version.</h2>
+                <p>A homebrew on Austin Street turned into one of Maine's most-loved craft breweries — and then, a decade later, something no one else was making.</p>
+            </div>
+
+            <div class="timeline-track">
+                <div class="timeline-progress" id="timelineProgress"></div>
+
+                <div class="timeline-rows" id="timelineRows">
+
+                    <article class="timeline-row" data-year="2013">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2013<span class="tag">Year Zero</span></div>
+                            <h3 class="timeline-headline">A homebrew setup on Austin Street, Westbrook.</h3>
+                            <p class="timeline-body">Will Fisher and his co-founder pool savings, buy a one-barrel system, and start brewing in a garage. No outside investment. No business plan, really. Just a conviction that Maine needed a great brewery.</p>
+                        </div>
+                        <div class="timeline-media">
+                            <img src="images/brand/austin-founding.webp" alt="Founders holding the original homebrew photo" />
+                            <div class="timeline-cap">Westbrook, ME · 2013</div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-row" data-year="2014">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2014<span class="tag">Doors Open</span></div>
+                            <h3 class="timeline-headline">Austin Street opens on Industrial Way, Portland.</h3>
+                            <p class="timeline-body">The brewery moves into a tiny tasting room on a dead-end industrial street. Lines form around the corner on release days. Ten years in at its newer home in East Bayside, Austin Street is one of the most respected craft breweries in New England.</p>
+                        </div>
+                        <div class="timeline-media">
+                            <img src="images/brand/austin-street.jpg" alt="Austin Street Brewery" />
+                            <div class="timeline-cap">East Bayside · Portland, ME</div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-row" data-year="2021">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2021<span class="tag">Kit is Born</span></div>
+                            <h3 class="timeline-headline">Rob Barrett joins Will to start something new: Maine's first craft N/A brewery.</h3>
+                            <p class="timeline-body">Nothing on shelves tasted like the beer they actually wanted to drink — so they refused to settle. They started engineering one from scratch: full craft flavor, under 0.5% ABV, only 80 calories. It took 18 months and dozens of rejected batches.</p>
+                        </div>
+                        <div class="timeline-media">
+                            <img src="images/brand/fridge-3.jpg" alt="The original Kit fridge" />
+                            <div class="timeline-cap">The Kit Fridge · 2021</div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-row" data-year="2023">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2023<span class="tag">Awards</span></div>
+                            <h3 class="timeline-headline">Kit Blonde takes home medal after medal.</h3>
+                            <p class="timeline-body">Kit Blonde Ale wins at Best of Craft Beer, the World Beer Awards, the US Open Beer Championship, and more — competing head-to-head against full-strength beers. The NA category is still an afterthought at most breweries. It isn't at Kit.</p>
+                        </div>
+                        <div class="timeline-media timeline-awards">
+                            <div class="award-grid">
+                                <img src="images/awards/silver-medal.webp" alt="Best of Craft Beer Silver" />
+                                <img src="images/awards/award-1.webp" alt="Award 1" />
+                                <img src="images/awards/award-2.webp" alt="Award 2" />
+                                <img src="images/awards/award-3.webp" alt="Award 3" />
+                                <img src="images/awards/award-4.webp" alt="Award 4" />
+                            </div>
+                            <div class="timeline-cap">Award-Winning · 2023</div>
+                        </div>
+                    </article>
+
+                    <article class="timeline-row" data-year="2024">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2024<span class="tag">Nationwide</span></div>
+                            <h3 class="timeline-headline">Kit lands at Whole Foods, Amazon, and thousands of independent retailers.</h3>
+                            <p class="timeline-body">The three-SKU lineup — Blonde, Golden, Hazy — goes deep in New England retail, and nationally online. Still brewed in small batches. Still tastes like Maine.</p>
+                        </div>
+                        <div class="timeline-media">
+                            <img src="images/products/variety-pack-1.jpg" alt="Kit variety pack" />
+                            <div class="timeline-cap">The Lineup · 2024</div>
+                        </div>
+                    </article>
+
                 </div>
             </div>
         </section>
 
-        <!-- Founder Section -->
-        <section class="partnership-section" style="background-color: #F5F0EB;">
-            <div class="container">
-                <div class="partnership-grid partnership-grid--reversed">
-                    <div class="partnership-content">
-                        <h2>Meet the Founders</h2>
-                        <p>William Fisher and Rob Barrett are the co-founders of KIT Non-Alc, based in Portland, Maine. Will brings deep craft beer expertise to KIT, having co-founded Austin Street Brewery in 2012 — one of the pre-eminent craft breweries in Portland, ME — before turning his attention to reimagining what non-alcoholic beer could be.</p>
-                        <p>Together, Will and Rob set out to prove that choosing non-alcoholic doesn't mean settling for less. Drawing on years of brewing experience and a shared belief that great beer should be for everyone, they built KIT from the ground up — with real craft credentials and an uncompromising commitment to flavor.</p>
+        <!-- FOUNDERS -->
+        <section class="founders" id="founders">
+            <div class="founders-header">
+                <div class="eyebrow">The Founders</div>
+                <h2>Two guys who really <em>like beer</em>, trying to change what that means.</h2>
+            </div>
+            <div class="founders-grid">
+                <article class="founder-card" tabindex="0">
+                    <img src="images/brand/will-headshot.jpg" alt="Will Fisher" />
+                    <div class="founder-label">
+                        <span class="role">Co-Founder</span>
+                        <span class="plus" aria-hidden="true">+</span>
                     </div>
-                    <div class="partnership-image">
-                        <img src="images/brand/will-headshot.jpg" alt="Will Fisher, Co-Founder of KIT NON-ALC" class="partnership-img" loading="lazy">
+                    <div class="founder-name">
+                        <h3>Will Fisher</h3>
+                        <div class="title">Brewmaster · Austin Street Co-founder</div>
                     </div>
+                    <div class="founder-bio">
+                        <p>Will co-founded Austin Street Brewery in 2013 and spent the next decade obsessing over what makes a beer actually taste good. He started Kit because he refused to accept the trade-off — great craft flavor or no alcohol, pick one. He wanted both.</p>
+                    </div>
+                </article>
+
+                <article class="founder-card" tabindex="0">
+                    <img src="images/brand/rob-barrett.webp" alt="Rob Barrett" class="rob-img" />
+                    <div class="founder-label">
+                        <span class="role">Co-Founder</span>
+                        <span class="plus" aria-hidden="true">+</span>
+                    </div>
+                    <div class="founder-name">
+                        <h3>Rob Barrett</h3>
+                        <div class="title">Partner · Builder of the business</div>
+                    </div>
+                    <div class="founder-bio">
+                        <p>Rob came on as co-founder in 2021, bringing a builder's instinct and a deep appreciation for doing things the right way. Together with Will, they turned a fridge in Maine into a national NA craft brand.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CLOSING -->
+        <section class="closing">
+            <div class="closing-bg"></div>
+            <div class="closing-inner">
+                <h2>From Maine, <em>under your own influence.</em></h2>
+                <p>A beer that doesn't ask you to compromise — on flavor, on how you feel, or on how you live. That's the whole idea.</p>
+                <div class="cta-row">
+                    <a href="shop.html" class="cta primary">Shop the Lineup</a>
+                    <a href="find-kit.html" class="cta ghost">Find Us Near You</a>
                 </div>
             </div>
         </section>
 
-        <!-- Your Kind of Craft Section -->
-        <section class="sustainability-section" style="background-color: #F5F0EB;">
-            <div class="container">
-                <h2>Built by real craft beer vets.</h2>
-                <p>Every batch of KIT is brewed with the same passion and precision as the finest craft beers, using the highest quality ingredients and time-tested brewing techniques. We believe that the non-alcoholic beer experience should be just as rich, complex, and satisfying as any craft beer on the shelf.</p>
-            </div>
-        </section>
     </main>
 
     <!-- Newsletter Section -->
@@ -179,7 +317,6 @@
         </div>
     </footer>
 
-
     <!-- Mobile Menu -->
     <nav class="mobile-menu">
         <div class="mobile-menu-header">
@@ -196,7 +333,7 @@
         </ul>
     </nav>
 
-
     <script src="js/main.js"></script>
+    <script src="js/about-pages.js"></script>
 </body>
 </html>
