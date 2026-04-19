@@ -164,7 +164,8 @@ document.addEventListener('DOMContentLoaded', () => {
       image: 'images/products/blonde-pour-1.jpg',
       gallery: ['images/products/blonde-pour-1.jpg', 'images/products/blonde-cheers.jpg', 'images/products/blonde-can-1.jpg', 'images/products/blonde-cooler-1.jpg'],
       description:
-        'Award-winning non-alcoholic craft beer. Light and citrusy with notes of grapefruit and a crisp, hop-forward finish.'
+        'Award-winning non-alcoholic craft beer. Light and citrusy with notes of grapefruit and a crisp, hop-forward finish.',
+      nutrition: { calories: '86', carbs: '18g', protein: '1.5g', fat: '0g' }
     },
     golden: {
       name: 'Golden',
@@ -174,7 +175,8 @@ document.addEventListener('DOMContentLoaded', () => {
       image: 'images/products/golden-can-1.jpg',
       gallery: ['images/products/golden-can-1.jpg', 'images/products/golden-pour-1.jpg', 'images/products/golden-can-2.jpg', 'images/products/golden-cooler-1.jpg'],
       description:
-        'A refreshing non-alcoholic craft beer with bright citrus notes and a smooth, easy-drinking finish for any occasion.'
+        'A refreshing non-alcoholic craft beer with bright citrus notes and a smooth, easy-drinking finish for any occasion.',
+      nutrition: { calories: '81', carbs: '16g', protein: '1.5g', fat: '0g' }
     },
     hazy: {
       name: 'Hazy IPA',
@@ -184,7 +186,8 @@ document.addEventListener('DOMContentLoaded', () => {
       image: 'images/products/hazy-can-1.jpg',
       gallery: ['images/products/hazy-can-1.jpg', 'images/products/hazy-pour-may25.jpg', 'images/products/hazy-can-2.jpg', 'images/products/hazy-cooler-1.jpg'],
       description:
-        'Our Hazy IPA is a bold, tropical non-alcoholic craft beer bursting with juicy hop flavors and a smooth, hazy body.'
+        'Our Hazy IPA is a bold, tropical non-alcoholic craft beer bursting with juicy hop flavors and a smooth, hazy body.',
+      nutrition: { calories: '83', carbs: '17g', protein: '1.5g', fat: '0g' }
     },
     variety: {
       name: 'Variety Pack',
@@ -194,7 +197,8 @@ document.addEventListener('DOMContentLoaded', () => {
       image: 'images/products/variety-pack-1.jpg',
       gallery: ['images/products/variety-pack-1.jpg', 'images/products/variety-cans-sky-1.jpg', 'images/products/variety-pack-1.jpg', 'images/products/variety-pack-1.jpg'],
       description:
-        "Can\u2019t decide? Try all three of our award-winning non-alcoholic craft beers in one convenient 12-pack."
+        "Can\u2019t decide? Try all three of our award-winning non-alcoholic craft beers in one convenient 12-pack.",
+      nutrition: { calories: '81–86', carbs: '16–18g', protein: '1.5g', fat: '0g' }
     }
   };
 
@@ -255,6 +259,18 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update description
         if (pdpDescription) {
           pdpDescription.textContent = variant.description;
+        }
+
+        // Update nutrition facts
+        if (variant.nutrition) {
+          const nutCal = document.getElementById('nut-calories');
+          const nutCarbs = document.getElementById('nut-carbs');
+          const nutProtein = document.getElementById('nut-protein');
+          const nutFat = document.getElementById('nut-fat');
+          if (nutCal) nutCal.textContent = variant.nutrition.calories;
+          if (nutCarbs) nutCarbs.textContent = variant.nutrition.carbs;
+          if (nutProtein) nutProtein.textContent = variant.nutrition.protein;
+          if (nutFat) nutFat.textContent = variant.nutrition.fat;
         }
       });
     });
