@@ -792,7 +792,7 @@ body.kit-about-page ::selection {
   margin: 0 0 2rem;
   color: var(--kit-white);
 }
-.about-main .closing h2 em { color: var(--kit-cream); font-weight: 500; font-style: italic; }
+.about-main .closing h2 em { color: var(--kit-blonde-red); font-weight: 500; font-style: italic; }
 .about-main .closing p {
   font-size: 1.15rem; max-width: 52ch; margin: 0 auto 2.5rem;
   color: rgba(255,255,255,.82); line-height: 1.6;
