@@ -275,6 +275,23 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    // Gallery thumbnail click → swap main image
+    const galleryThumbs = document.querySelectorAll('.gallery-thumbnails .thumbnail');
+    const mainImage = document.querySelector('.main-product-image');
+    if (galleryThumbs.length > 0 && mainImage) {
+      galleryThumbs.forEach((thumb) => {
+        thumb.addEventListener('click', () => {
+          const thumbImg = thumb.querySelector('img');
+          if (thumbImg) {
+            mainImage.src = thumbImg.src;
+            mainImage.alt = thumbImg.alt;
+          }
+          galleryThumbs.forEach((t) => t.classList.remove('active'));
+          thumb.classList.add('active');
+        });
+      });
+    }
+
     // Auto-select variant from URL parameter (e.g., shop.html?variant=golden)
     const urlParams = new URLSearchParams(window.location.search);
     const urlVariant = urlParams.get('variant');

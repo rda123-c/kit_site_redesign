@@ -13,11 +13,19 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/home-page.css">
 </head>
 <body>
     <!-- Announcement Bar -->
-    <div class="announcement-bar">
-        <p>Now in Whole Foods Across New England!</p>
+    <div class="announcement-bar" aria-label="Announcement">
+        <div class="announcement-track">
+            <span>Now in Whole Foods Across New England!<span class="dot"></span></span>
+            <span>Shipped nationwide through Amazon<span class="dot"></span></span>
+            <span>Award-winning craft beer · 4 real ingredients<span class="dot"></span></span>
+            <span>Now in Whole Foods Across New England!<span class="dot"></span></span>
+            <span>Shipped nationwide through Amazon<span class="dot"></span></span>
+            <span>Award-winning craft beer · 4 real ingredients<span class="dot"></span></span>
+        </div>
     </div>
 
     <!-- Header -->
@@ -78,171 +86,255 @@
     </nav>
 
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section class="hero" aria-label="Hero">
-            <img src="images/hero/hero-pool.jpg" alt="KIT beer lifestyle hero image" class="hero-image" loading="eager">
-            <div class="hero-content">
-                <span class="hero-eyebrow">TOMORROW'S FAVORITE BEER</span>
-                <h1 class="hero-headline">Under Your Own Influence</h1>
+    <!-- Main Content (from handoff design) -->
+    <main class="home-main">
+
+        <!-- HERO -->
+        <section class="hero-home" aria-label="Hero">
+            <img src="images/hero/hero-pool.jpg" alt="" class="hero-bg-img" />
+            <div class="hero-grain"></div>
+
+            <div class="hero-inner">
+                <span class="hero-eyebrow">Tomorrow's Favorite Beer</span>
+                <h1 class="hero-headline" aria-label="Under Your Own Influence">
+                    <span class="line"><span class="word w0">Under&nbsp;</span><span class="word italic w1">Your</span></span>
+                    <span class="line"><span class="word w2">Own&nbsp;</span><span class="word accent w3">Influence.</span></span>
+                </h1>
                 <p class="hero-subtext">Award-winning, non-alcoholic craft beer. Brewed with 4 real ingredients.</p>
-                <a href="shop.html" class="btn btn-primary hero-cta">SHOP KIT</a>
+                <div class="hero-cta-row">
+                    <a href="shop.html" class="btn-hp">
+                        Shop Kit
+                        <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="find-kit.html" class="btn-hp-ghost">Find In Store</a>
+                </div>
+            </div>
+
+            <div class="hero-scroll-cue" aria-hidden="true">
+                <span class="line"></span>
             </div>
         </section>
 
-        <!-- Awards Section -->
-        <section class="awards-section" aria-label="Awards">
-            <h2 class="awards-headline">Award-Winning</h2>
-            <div class="awards-container">
-                <div class="award">
-                    <img src="images/awards/award-1.webp" alt="Gold Medal — Best of Craft Beer Awards, Best NA Hop-Forward Beer 2023" loading="lazy">
-                </div>
-                <div class="award">
-                    <img src="images/awards/award-2.webp" alt="First Place — GIBCC Non-Alcoholic Beer" loading="lazy">
-                </div>
-                <div class="award">
-                    <img src="images/awards/award-3.webp" alt="First Place — DE Non-Alcoholic Beer" loading="lazy">
-                </div>
-                <div class="award">
-                    <img src="images/awards/award-4.webp" alt="Silver Medal — US Open Beer Championship, NA Malt Beverage" loading="lazy">
-                </div>
-                <div class="award">
-                    <img src="images/awards/silver-medal.webp" alt="Silver Medal — Best of Craft Beer Awards, Best NA Hop-Forward Beer 2024" loading="lazy">
-                </div>
+        <!-- AWARDS MARQUEE -->
+        <section class="awards-marquee-section" aria-label="Awards">
+            <div class="awards-marquee-headline">
+                <span class="line" aria-hidden="true"></span>
+                <span><em>Award</em>-Winning</span>
+                <span class="line" aria-hidden="true"></span>
+            </div>
+            <div class="awards-marquee">
+                <img src="images/awards/award-1.webp" alt="Gold Medal — Best of Craft Beer Awards, Best NA Hop-Forward Beer 2023" />
+                <img src="images/awards/award-2.webp" alt="First Place — GIBCC Non-Alcoholic Beer" />
+                <img src="images/awards/award-3.webp" alt="First Place — DE Non-Alcoholic Beer" />
+                <img src="images/awards/award-4.webp" alt="Silver Medal — US Open Beer Championship, NA Malt Beverage" />
+                <img src="images/awards/silver-medal.webp" alt="Silver Medal — Best of Craft Beer Awards, Best NA Hop-Forward Beer 2024" />
+                <img src="images/awards/award-1.webp" alt="" aria-hidden="true" />
+                <img src="images/awards/award-2.webp" alt="" aria-hidden="true" />
+                <img src="images/awards/award-3.webp" alt="" aria-hidden="true" />
+                <img src="images/awards/award-4.webp" alt="" aria-hidden="true" />
+                <img src="images/awards/silver-medal.webp" alt="" aria-hidden="true" />
             </div>
         </section>
 
-        <!-- Featured Products Section -->
-        <section class="featured-products" aria-label="Featured products">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-eyebrow">OUR BEERS</span>
-                </div>
+        <!-- PRODUCTS -->
+        <section class="products-section-hp" aria-label="Featured products">
+            <div class="products-header-hp">
+                <span class="section-eyebrow-hp reveal">Our Beers</span>
+                <h2 class="products-title-hp reveal reveal-delay-1">Three ways to drink <em>under your own influence.</em></h2>
+            </div>
 
-                <div class="products-grid">
-                    <!-- Blonde Product -->
-                    <div class="product-card">
-                        <a href="shop.html?variant=blonde">
-                            <img src="images/products/blonde-pour-1.jpg" alt="KIT Blonde Ale" class="product-image product-image-blonde" loading="lazy">
-                        </a>
-                        <div class="product-info">
-                            <h3 class="product-name">Blonde</h3>
-                            <p class="product-descriptor">Crisp & Crushable</p>
-                            <a href="shop.html?variant=blonde" class="btn btn-secondary btn-small">SHOP</a>
+            <div class="products-grid-hp">
+                <article class="product-card-hp theme-blonde reveal">
+                    <a href="shop.html?variant=blonde" class="product-image-wrap">
+                        <span class="product-num" aria-hidden="true">01</span>
+                        <img src="images/products/blonde-pour-1.jpg" alt="KIT Blonde Ale" loading="lazy" />
+                    </a>
+                    <div class="product-info-hp">
+                        <div>
+                            <h3 class="product-name-hp">Blonde</h3>
+                            <p class="product-descriptor-hp">Crisp &amp; Crushable</p>
                         </div>
+                        <a href="shop.html?variant=blonde" class="product-shop" aria-label="Shop Blonde">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
                     </div>
+                </article>
 
-                    <!-- Golden Product -->
-                    <div class="product-card">
-                        <a href="shop.html?variant=golden">
-                            <img src="images/products/golden-pour-1.jpg" alt="KIT Golden Ale" class="product-image product-image-golden" loading="lazy">
-                        </a>
-                        <div class="product-info">
-                            <h3 class="product-name">Golden</h3>
-                            <p class="product-descriptor">Light & Citrusy</p>
-                            <a href="shop.html?variant=golden" class="btn btn-secondary btn-small">SHOP</a>
+                <article class="product-card-hp theme-golden reveal reveal-delay-1">
+                    <a href="shop.html?variant=golden" class="product-image-wrap">
+                        <span class="product-num" aria-hidden="true">02</span>
+                        <img src="images/products/golden-pour-1.jpg" alt="KIT Golden Ale" loading="lazy" />
+                    </a>
+                    <div class="product-info-hp">
+                        <div>
+                            <h3 class="product-name-hp">Golden</h3>
+                            <p class="product-descriptor-hp">Light &amp; Citrusy</p>
                         </div>
+                        <a href="shop.html?variant=golden" class="product-shop" aria-label="Shop Golden">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
                     </div>
+                </article>
 
-                    <!-- Hazy IPA Product -->
-                    <div class="product-card">
-                        <a href="shop.html?variant=hazy">
-                            <img src="images/products/hazy-pour-may25.jpg" alt="KIT Hazy IPA" class="product-image product-image-hazy" loading="lazy">
-                        </a>
-                        <div class="product-info">
-                            <h3 class="product-name">Hazy IPA</h3>
-                            <p class="product-descriptor">Tropical & Juicy</p>
-                            <a href="shop.html?variant=hazy" class="btn btn-secondary btn-small">SHOP</a>
+                <article class="product-card-hp theme-hazy reveal reveal-delay-2">
+                    <a href="shop.html?variant=hazy" class="product-image-wrap">
+                        <span class="product-num" aria-hidden="true">03</span>
+                        <img src="images/products/hazy-pour-may25.jpg" alt="KIT Hazy IPA" loading="lazy" />
+                    </a>
+                    <div class="product-info-hp">
+                        <div>
+                            <h3 class="product-name-hp">Hazy IPA</h3>
+                            <p class="product-descriptor-hp">Tropical &amp; Juicy</p>
                         </div>
+                        <a href="shop.html?variant=hazy" class="product-shop" aria-label="Shop Hazy IPA">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
                     </div>
+                </article>
 
-                    <!-- Variety Pack -->
-                    <div class="product-card variety-pack">
-                        <a href="shop.html?variant=variety">
-                            <img src="images/products/variety-pack-1.jpg" alt="KIT Variety Pack" class="product-image product-image-variety" loading="lazy">
-                        </a>
-                        <div class="product-info">
-                            <h3 class="product-name">Variety Pack</h3>
-                            <p class="product-descriptor">Try Them All</p>
-                            <a href="shop.html?variant=variety" class="btn btn-secondary btn-small">SHOP</a>
+                <article class="product-card-hp theme-variety reveal reveal-delay-3">
+                    <a href="shop.html?variant=variety" class="product-image-wrap">
+                        <span class="product-num" aria-hidden="true">04</span>
+                        <img src="images/products/variety-pack-1.jpg" alt="KIT Variety Pack" loading="lazy" />
+                    </a>
+                    <div class="product-info-hp">
+                        <div>
+                            <h3 class="product-name-hp">Variety Pack</h3>
+                            <p class="product-descriptor-hp">Try Them All</p>
                         </div>
+                        <a href="shop.html?variant=variety" class="product-shop" aria-label="Shop Variety Pack">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
 
-        <!-- Your Kind of Craft Brand Story Section -->
-        <section class="brand-story" aria-label="Brand story">
-            <div class="section-container brand-story-layout">
-                <img src="images/hero/hero-boxes-sky.jpg" alt="KIT NON-ALC craft beer" class="brand-story-image" loading="lazy">
+        <!-- TICKER -->
+        <div class="kit-ticker" aria-hidden="true">
+            <div class="kit-ticker-track">
+                <span>Real Beer.<span class="dot"></span><em>Real Ingredients.</em><span class="dot"></span>No Excuses.<span class="dot"></span></span>
+                <span>Real Beer.<span class="dot"></span><em>Real Ingredients.</em><span class="dot"></span>No Excuses.<span class="dot"></span></span>
+                <span>Real Beer.<span class="dot"></span><em>Real Ingredients.</em><span class="dot"></span>No Excuses.<span class="dot"></span></span>
+            </div>
+        </div>
 
-                <div class="brand-story-content">
-                    <span class="section-eyebrow">YOUR KIND OF CRAFT</span>
-                    <h2 class="section-headline">Real Beer. Real Ingredients. No Excuses.</h2>
-                    <p class="brand-story-text">
+        <!-- BRAND STORY -->
+        <section class="brand-story-hp" aria-label="Brand story">
+            <div class="brand-story-bg-glow"></div>
+            <div class="brand-story-layout-hp">
+                <div class="brand-story-image-wrap reveal">
+                    <img src="images/hero/hero-boxes-sky.jpg" alt="KIT NON-ALC craft beer" class="brand-story-image-hp" loading="lazy" />
+                </div>
+
+                <div class="brand-story-content-hp">
+                    <span class="section-eyebrow-hp reveal">Your Kind Of Craft</span>
+                    <h2 class="brand-story-headline-hp reveal reveal-delay-1">Real Beer. <em>Real Ingredients.</em> <span class="accent">No Excuses.</span></h2>
+                    <p class="brand-story-text-hp reveal reveal-delay-2">
                         Kit is an award-winning non-alcoholic craft from Maine with just 4 real ingredients.
                         We believe in creating a product that doesn't compromise on flavor or quality. Every sip delivers
                         the taste and craft of beer without the alcohol—for those moments when you want the experience, not the compromise.
                     </p>
-                    <a href="our-story.html" class="btn btn-primary">OUR STORY</a>
+
+                    <a href="our-story.html" class="btn-hp-secondary reveal reveal-delay-3">
+                        Our Story
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Instagram Feed Section -->
-        <section class="instagram-section" aria-label="Instagram feed">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-eyebrow">FOLLOW ALONG</span>
-                    <h2 class="section-headline">@kitnonalc</h2>
-                </div>
-                <div class="instagram-feed" id="instagram-feed">
-                    <!-- Elfsight or native IG embed widget loads here -->
-                </div>
-                <script src="https://static.elfsight.com/platform/platform.js" async></script>
-                <div class="elfsight-app-lazy" data-elfsight-app-lazy data-app-id="instagram-feed-widget"></div>
-                <!-- Fallback: static grid of lifestyle images if widget doesn't load -->
-                <noscript>
-                    <div class="instagram-fallback">
-                        <a href="https://instagram.com/kitnonalc" target="_blank" rel="noopener">
-                            <img src="images/lifestyle/pool-friends-1.jpg" alt="@kitnonalc on Instagram" class="lifestyle-image" loading="lazy">
-                        </a>
-                        <a href="https://instagram.com/kitnonalc" target="_blank" rel="noopener">
-                            <img src="images/lifestyle/bbq-1.jpg" alt="@kitnonalc on Instagram" class="lifestyle-image" loading="lazy">
-                        </a>
-                        <a href="https://instagram.com/kitnonalc" target="_blank" rel="noopener">
-                            <img src="images/lifestyle/golf-1.jpg" alt="@kitnonalc on Instagram" class="lifestyle-image" loading="lazy">
-                        </a>
-                    </div>
-                </noscript>
-                <div class="instagram-cta">
-                    <a href="https://instagram.com/kitnonalc" target="_blank" rel="noopener" class="btn btn-outline">FOLLOW US ON INSTAGRAM</a>
+        <!-- INSTAGRAM / LIFESTYLE -->
+        <section class="instagram-section-hp" aria-label="Instagram feed">
+            <div class="instagram-header-hp">
+                <span class="section-eyebrow-hp reveal">Follow Along</span>
+                <h2 class="instagram-title-hp reveal reveal-delay-1"><em>@kitnonalc</em></h2>
+            </div>
+
+            <div class="lifestyle-marquee-wrap">
+                <div class="lifestyle-marquee row-1">
+                    <a class="lifestyle-tile" href="https://instagram.com/kitnonalc" target="_blank" rel="noopener">
+                        <img src="images/lifestyle/pool-friends-1.jpg" alt="" loading="lazy" />
+                        <span class="lifestyle-tile-tag">Poolside</span>
+                    </a>
+                    <a class="lifestyle-tile" href="https://instagram.com/kitnonalc" target="_blank" rel="noopener">
+                        <img src="images/lifestyle/bbq-1.jpg" alt="" loading="lazy" />
+                        <span class="lifestyle-tile-tag">Cookouts</span>
+                    </a>
+                    <a class="lifestyle-tile" href="https://instagram.com/kitnonalc" target="_blank" rel="noopener">
+                        <img src="images/lifestyle/golf-1.jpg" alt="" loading="lazy" />
+                        <span class="lifestyle-tile-tag">On The Course</span>
+                    </a>
+                    <a class="lifestyle-tile" href="https://instagram.com/kitnonalc" target="_blank" rel="noopener">
+                        <img src="images/products/blonde-cheers.jpg" alt="" loading="lazy" />
+                        <span class="lifestyle-tile-tag">Cheers</span>
+                    </a>
+                    <a class="lifestyle-tile" href="https://instagram.com/kitnonalc" target="_blank" rel="noopener">
+                        <img src="images/hero/hero-boxes-sky.jpg" alt="" loading="lazy" />
+                        <span class="lifestyle-tile-tag">Maine</span>
+                    </a>
+                    <!-- duplicate for seamless loop -->
+                    <a class="lifestyle-tile" href="https://instagram.com/kitnonalc" target="_blank" rel="noopener" aria-hidden="true">
+                        <img src="images/lifestyle/pool-friends-1.jpg" alt="" loading="lazy" />
+                    </a>
+                    <a class="lifestyle-tile" href="https://instagram.com/kitnonalc" target="_blank" rel="noopener" aria-hidden="true">
+                        <img src="images/lifestyle/bbq-1.jpg" alt="" loading="lazy" />
+                    </a>
+                    <a class="lifestyle-tile" href="https://instagram.com/kitnonalc" target="_blank" rel="noopener" aria-hidden="true">
+                        <img src="images/lifestyle/golf-1.jpg" alt="" loading="lazy" />
+                    </a>
+                    <a class="lifestyle-tile" href="https://instagram.com/kitnonalc" target="_blank" rel="noopener" aria-hidden="true">
+                        <img src="images/products/blonde-cheers.jpg" alt="" loading="lazy" />
+                    </a>
+                    <a class="lifestyle-tile" href="https://instagram.com/kitnonalc" target="_blank" rel="noopener" aria-hidden="true">
+                        <img src="images/hero/hero-boxes-sky.jpg" alt="" loading="lazy" />
+                    </a>
                 </div>
             </div>
-        </section>
 
-        <!-- Newsletter Section -->
-        <section class="newsletter" aria-label="Newsletter signup">
-            <div class="section-container newsletter-content">
-                <h2 class="newsletter-headline">Stay In The Kit</h2>
-                <p class="newsletter-subtext">Sign up for drops, deals, and good vibes.</p>
-
-                <form class="newsletter-form" method="post" action="/newsletter">
-                    <div class="newsletter-form-group">
-                        <input
-                            type="email"
-                            class="newsletter-input"
-                            placeholder="Enter your email"
-                            required
-                            aria-label="Email address"
-                        >
-                        <button type="submit" class="btn btn-secondary">SUBSCRIBE</button>
-                    </div>
-                </form>
+            <div class="instagram-cta-hp">
+                <a href="https://instagram.com/kitnonalc" target="_blank" rel="noopener" class="btn-hp-secondary">
+                    Follow Us On Instagram
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.057-1.645.069-4.849.069-3.204 0-3.584-.012-4.849-.069-3.259-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                    </svg>
+                </a>
             </div>
         </section>
     </main>
+
+    <!-- Newsletter Section (kept from existing site) -->
+    <section class="newsletter" aria-label="Newsletter signup">
+        <div class="section-container newsletter-content">
+            <h2 class="newsletter-headline">Stay In The Kit</h2>
+            <p class="newsletter-subtext">Sign up for drops, deals, and good vibes.</p>
+
+            <form class="newsletter-form" method="post" action="/newsletter">
+                <div class="newsletter-form-group">
+                    <input
+                        type="email"
+                        class="newsletter-input"
+                        placeholder="Enter your email"
+                        required
+                        aria-label="Email address"
+                    >
+                    <button type="submit" class="btn btn-secondary">SUBSCRIBE</button>
+                </div>
+            </form>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -313,5 +405,40 @@
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
+    <script>
+        // Reveal-on-scroll for home page
+        (function () {
+            const els = document.querySelectorAll('.home-main .reveal');
+            if (!('IntersectionObserver' in window) || !els.length) {
+                els.forEach(el => el.classList.add('in'));
+                return;
+            }
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('in');
+                        io.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+            els.forEach(el => io.observe(el));
+
+            // Light parallax on hero bg image
+            const heroBg = document.querySelector('.home-main .hero-bg-img');
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        const y = window.scrollY;
+                        if (heroBg && y < window.innerHeight) {
+                            heroBg.style.transform = `scale(1.04) translateY(${y * 0.25}px)`;
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }, { passive: true });
+        })();
+    </script>
 </body>
 </html>

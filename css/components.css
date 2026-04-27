@@ -1,18 +1,55 @@
 /* ========================================
-   ANNOUNCEMENT BAR
+   ANNOUNCEMENT BAR (scrolling marquee)
    ======================================== */
 
 .announcement-bar {
   background-color: var(--kit-blonde-blue);
   color: var(--kit-white);
-  padding: var(--space-md) var(--space-lg);
-  text-align: center;
+  padding: 0.75rem 0;
   font-family: var(--font-family-sans);
-  font-size: var(--fs-body-sm);
-  font-weight: var(--fw-semi-bold);
+  font-size: 0.75rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: var(--ls-wide);
+  letter-spacing: 0.18em;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
   z-index: var(--z-sticky);
+}
+
+.announcement-bar .announcement-track {
+  display: inline-flex;
+  gap: 3rem;
+  padding-left: 100%;
+  animation: announcementMarquee 32s linear infinite;
+}
+
+.announcement-bar .announcement-track span {
+  display: inline-flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.announcement-bar .announcement-track .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+@keyframes announcementMarquee {
+  to { transform: translateX(-100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .announcement-bar .announcement-track {
+    animation: none;
+    padding-left: 0;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 /* ========================================

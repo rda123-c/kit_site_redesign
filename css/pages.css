@@ -1812,8 +1812,13 @@
 
   /* ---- ANNOUNCEMENT BAR ---- */
   .announcement-bar {
-    font-size: 0.7rem;
-    padding: var(--space-sm) var(--space-md);
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    padding: 0.6rem 0;
+  }
+  .announcement-bar .announcement-track,
+  .announcement-bar .announcement-track span {
+    gap: 2rem;
   }
 
   /* ---- HEADER ---- */
