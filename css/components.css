@@ -18,16 +18,18 @@
 }
 
 .announcement-bar .announcement-track {
-  display: inline-flex;
+  display: flex;
   gap: 3rem;
-  padding-left: 100%;
+  width: max-content;
   animation: announcementMarquee 32s linear infinite;
+  will-change: transform;
 }
 
 .announcement-bar .announcement-track span {
   display: inline-flex;
   align-items: center;
   gap: 3rem;
+  flex-shrink: 0;
 }
 
 .announcement-bar .announcement-track .dot {
@@ -40,16 +42,8 @@
 }
 
 @keyframes announcementMarquee {
-  to { transform: translateX(-100%); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .announcement-bar .announcement-track {
-    animation: none;
-    padding-left: 0;
-    justify-content: center;
-    width: 100%;
-  }
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
 /* ========================================
