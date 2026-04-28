@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
       price: '$28.00',
       color: '#FFBF3F',
       image: 'images/products/variety-pack-1.jpg',
-      gallery: ['images/products/variety-pack-1.jpg', 'images/products/variety-cans-sky-1.jpg', 'images/products/variety-pack-1.jpg', 'images/products/variety-pack-1.jpg'],
+      gallery: ['images/products/variety-pack-1.jpg', 'images/products/variety-cans-sky-1.jpg', 'images/products/CARD-GAMES-KIT-JULY25-1.jpg', 'images/products/variety-pack-1.jpg'],
       description:
         "Can\u2019t decide? Try all three of our award-winning non-alcoholic craft beers in one convenient 12-pack.",
       nutrition: { calories: '69', carbs: '14g', protein: '1.5g', fat: '0g' },
