@@ -2,11 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WC5PPFFXS4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WC5PPFFXS4');
+    </script>
+
+    <!-- Meta Pixel -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1373698818117950');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1373698818117950&ev=PageView&noscript=1"/></noscript>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="KIT NON-ALC | Award-winning, crushable, non-alcoholic craft beer brewed with 4 real ingredients in Maine.">
+    <meta name="description" content="Award-winning, non-alcoholic craft beer brewed with 4 real ingredients in Maine. Under 0.5% ABV, 69 calories. Shop Blonde, Golden, and Hazy IPA.">
     <meta name="theme-color" content="#1a2332">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="KIT NON-ALC | Tomorrow's Favorite Beer">
+    <meta property="og:description" content="Award-winning, non-alcoholic craft beer brewed with 4 real ingredients in Maine. Under 0.5% ABV, 69 calories.">
+    <meta property="og:image" content="https://kit-na.com/images/hero/hero-boxes-sky.jpg">
+    <meta property="og:url" content="https://kit-na.com/">
+    <meta property="og:site_name" content="KIT NON-ALC">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KIT NON-ALC | Tomorrow's Favorite Beer">
+    <meta name="twitter:description" content="Award-winning, non-alcoholic craft beer brewed with 4 real ingredients in Maine.">
+    <meta name="twitter:image" content="https://kit-na.com/images/hero/hero-boxes-sky.jpg">
     <title>KIT NON-ALC | Tomorrow's Favorite Beer</title>
     <link rel="icon" type="image/svg+xml" href="images/logos/Kit_Non_Alc_Black.svg">
+    <link rel="canonical" href="https://kit-na.com/">
 
     <!-- CSS Files in Order -->
     <link rel="stylesheet" href="css/variables.css">
@@ -14,6 +49,28 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/pages.css">
     <link rel="stylesheet" href="css/home-page.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "KIT NON-ALC",
+      "url": "https://kit-na.com",
+      "logo": "https://kit-na.com/images/logos/Kit_Non_Alc_Black.svg",
+      "description": "Award-winning non-alcoholic craft beer brewed with 4 real ingredients in Portland, Maine.",
+      "foundingDate": "2013",
+      "foundingLocation": "Portland, Maine",
+      "sameAs": [
+        "https://www.instagram.com/kitnonalc/",
+        "https://www.facebook.com/kitnabrewing/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "marketing@kit-na.com",
+        "contactType": "customer service"
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Announcement Bar -->
@@ -399,6 +456,33 @@
     </footer>
 
     <!-- JavaScript -->
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <p>We use cookies to improve your experience and analyze site traffic. <a href="#">Privacy Policy</a></p>
+        <div class="cookie-banner-actions">
+            <button class="cookie-btn-accept" id="cookieAccept">Accept</button>
+            <button class="cookie-btn-decline" id="cookieDecline">Decline</button>
+        </div>
+    </div>
+
+    <script>
+      (function() {
+        var banner = document.getElementById('cookieBanner');
+        if (!banner) return;
+        if (document.cookie.indexOf('kit_cookies=') === -1) {
+          banner.classList.add('show');
+        }
+        document.getElementById('cookieAccept').addEventListener('click', function() {
+          document.cookie = 'kit_cookies=accepted;path=/;max-age=31536000;SameSite=Lax';
+          banner.classList.remove('show');
+        });
+        document.getElementById('cookieDecline').addEventListener('click', function() {
+          document.cookie = 'kit_cookies=declined;path=/;max-age=31536000;SameSite=Lax';
+          banner.classList.remove('show');
+        });
+      })();
+    </script>
     <script src="js/main.js"></script>
     <script>
         // Reveal-on-scroll for home page
