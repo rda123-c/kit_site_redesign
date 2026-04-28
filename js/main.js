@@ -168,10 +168,10 @@ document.addEventListener('DOMContentLoaded', () => {
       nutrition: { calories: '69', carbs: '14g', protein: '1.5g', fat: '0g' },
       retailers: {
         amazon: 'https://www.amazon.com/dp/B0DJCFTWYZ?maas=maas_adg_E811CD195C377453E11545D593E93072_afap_abs&ref_=aa_maas&tag=maas',
-        walmart: '',
-        wholefoods: '',
-        thrive: '',
-        instacart: ''
+        walmart: 'https://www.walmart.com/ip/Kit-Non-alc-Variety-Pack-12-12c/15521073308?classType=REGULAR',
+        wholefoods: 'https://www.wholefoodsmarket.com/grocery/product/kit-na-brewing-kit-non-alc-non-alcoholic-craft-beer-variety-12pk-cans-blonde-hazy-golden-12-fl-oz-4-simple-ingredients-gluten-removed-vegan-friendly-dairy-free-variety-pack-b0djcd29x9?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341',
+        thrive: 'https://thrivemarket.com/p/kit-non-alc-brewery-blonde-ale',
+        instacart: 'https://www.instacart.com/products/26383827-kit-na-brewing-on-your-mark-non-alcoholic-beer-6-ct'
       }
     },
     golden: {
@@ -185,11 +185,11 @@ document.addEventListener('DOMContentLoaded', () => {
         'With multiple awards, this refreshing non-alcoholic craft beer is bursting with bright citrus notes and a smooth, easy-drinking finish. Great for any occasion.',
       nutrition: { calories: '69', carbs: '14g', protein: '1.5g', fat: '0g' },
       retailers: {
-        amazon: 'https://amazon.com/dp/B0DJCFV9ZJ?maas=maas_adg_46F6CE4F9058596519535FB9B52003B8_afap_abs&ref_=aa_maas&tag=maas',
-        walmart: '',
-        wholefoods: '',
-        thrive: '',
-        instacart: ''
+        amazon: 'http://amazon.com/dp/B0DJCFV9ZJ?maas=maas_adg_46F6CE4F9058596519535FB9B52003B8_afap_abs&ref_=aa_maas&tag=maas',
+        walmart: 'https://www.walmart.com/ip/Kit-Non-alc-Golden-6-12c/15587515282?classType=REGULAR',
+        wholefoods: 'https://www.wholefoodsmarket.com/grocery/product/kit-na-brewing-kit-non-alc-non-alcoholic-craft-beer-variety-12pk-cans-blonde-hazy-golden-12-fl-oz-4-simple-ingredients-gluten-removed-vegan-friendly-dairy-free-variety-pack-b0djcd29x9?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341',
+        thrive: 'https://thrivemarket.com/p/kit-non-alc-brewery-golden-ale',
+        instacart: 'https://www.instacart.com/products/27927226-kit-craft-na-get-set-ipa-non-alcoholic-beer'
       }
     },
     hazy: {
@@ -204,10 +204,10 @@ document.addEventListener('DOMContentLoaded', () => {
       nutrition: { calories: '69', carbs: '14g', protein: '1.5g', fat: '0g' },
       retailers: {
         amazon: 'https://www.amazon.com/dp/B0DJCD57B5?maas=maas_adg_B7DD0067C3F0D43F228DB7F43D60351F_afap_abs&ref_=aa_maas&tag=maas',
-        walmart: '',
-        wholefoods: '',
-        thrive: '',
-        instacart: ''
+        walmart: 'https://www.walmart.com/ip/Kit-Non-alc-Variety-Pack-12-12c/15521073308?classType=REGULAR',
+        wholefoods: 'https://www.wholefoodsmarket.com/grocery/product/kit-na-brewing-kit-non-alc-non-alcoholic-craft-beer-hazy-ipa-6-pack-12-fl-oz-4-simple-ingredients-gluten-removed-vegan-friendly-dairy-free-hazy-ipa-b0djcd57b5?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341',
+        thrive: 'https://thrivemarket.com/p/kit-non-alc-brewery-hazy-ipa',
+        instacart: 'https://www.instacart.com/products/30153428-kit-na-brewing-here-we-go-hazy-ipa-72-fl-oz'
       }
     },
     variety: {
@@ -222,10 +222,10 @@ document.addEventListener('DOMContentLoaded', () => {
       nutrition: { calories: '69', carbs: '14g', protein: '1.5g', fat: '0g' },
       retailers: {
         amazon: 'https://www.amazon.com/dp/B0DJCD29X9?maas=maas_adg_C25EB845C4CC3FEB858A8382B4387586_afap_abs&ref_=aa_maas&tag=maas',
-        walmart: '',
-        wholefoods: '',
-        thrive: '',
-        instacart: ''
+        walmart: 'https://www.walmart.com/ip/Kit-Non-alc-Variety-Pack-12-12c/15521073308?classType=REGULAR',
+        wholefoods: 'https://www.wholefoodsmarket.com/grocery/product/kit-na-brewing-kit-non-alc-non-alcoholic-craft-beer-variety-12pk-cans-blonde-hazy-golden-12-fl-oz-4-simple-ingredients-gluten-removed-vegan-friendly-dairy-free-variety-pack-b0djcd29x9?ref_=US_OTR_ALL_UFG_WFM_OTHER_0542341',
+        thrive: 'https://thrivemarket.com/p/kit-non-alc-brewery-golden-ale',
+        instacart: 'https://www.instacart.com/products/32600133-kit-na-brewing-starter-variety-pack-12-fl-oz'
       }
     }
   };
