@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ============================================================================
-  // FIND KIT — IFRAME EXPAND ON CLICK
+  // FIND Kit — IFRAME EXPAND ON CLICK
   // ============================================================================
 
   const finderContainer = document.getElementById('finderContainer');
@@ -164,8 +164,8 @@ document.addEventListener('DOMContentLoaded', () => {
       image: 'images/products/blonde-pour-1.jpg',
       gallery: ['images/products/blonde-pour-1.jpg', 'images/products/blonde-cheers.jpg', 'images/products/blonde-can-1.jpg', 'images/products/blonde-cooler-1.jpg'],
       description:
-        'Award-winning non-alcoholic craft beer. Light and citrusy with notes of grapefruit and a crisp, hop-forward finish.',
-      nutrition: { calories: '86', carbs: '18g', protein: '1.5g', fat: '0g' },
+        'This award-winning non-alcoholic craft beer is the first one Kit released in 2021. Light and citrusy with notes of grapefruit and a crisp, hop-forward finish.',
+      nutrition: { calories: '69', carbs: '14g', protein: '1.5g', fat: '0g' },
       retailers: {
         amazon: 'https://www.amazon.com/dp/B0DJCFTWYZ?maas=maas_adg_E811CD195C377453E11545D593E93072_afap_abs&ref_=aa_maas&tag=maas',
         walmart: '',
@@ -182,8 +182,8 @@ document.addEventListener('DOMContentLoaded', () => {
       image: 'images/products/golden-can-1.jpg',
       gallery: ['images/products/golden-can-1.jpg', 'images/products/golden-pour-1.jpg', 'images/products/golden-can-2.jpg', 'images/products/golden-cooler-1.jpg'],
       description:
-        'A refreshing non-alcoholic craft beer with bright citrus notes and a smooth, easy-drinking finish for any occasion.',
-      nutrition: { calories: '81', carbs: '16g', protein: '1.5g', fat: '0g' },
+        'With multiple awards, this refreshing non-alcoholic craft beer is bursting with bright citrus notes and a smooth, easy-drinking finish. Great for any occasion.',
+      nutrition: { calories: '69', carbs: '14g', protein: '1.5g', fat: '0g' },
       retailers: {
         amazon: 'https://amazon.com/dp/B0DJCFV9ZJ?maas=maas_adg_46F6CE4F9058596519535FB9B52003B8_afap_abs&ref_=aa_maas&tag=maas',
         walmart: '',
@@ -200,8 +200,8 @@ document.addEventListener('DOMContentLoaded', () => {
       image: 'images/products/hazy-can-1.jpg',
       gallery: ['images/products/hazy-can-1.jpg', 'images/products/hazy-pour-may25.jpg', 'images/products/hazy-can-2.jpg', 'images/products/hazy-cooler-1.jpg'],
       description:
-        'Our Hazy IPA is a bold, tropical non-alcoholic craft beer bursting with juicy hop flavors and a smooth, hazy body.',
-      nutrition: { calories: '83', carbs: '17g', protein: '1.5g', fat: '0g' },
+        'Our award-winning Hazy IPA is a hop-forward non-alcoholic craft beer bursting with juicy hop flavors and finishing with a smooth, hazy mouthfeel.',
+      nutrition: { calories: '69', carbs: '14g', protein: '1.5g', fat: '0g' },
       retailers: {
         amazon: 'https://www.amazon.com/dp/B0DJCD57B5?maas=maas_adg_B7DD0067C3F0D43F228DB7F43D60351F_afap_abs&ref_=aa_maas&tag=maas',
         walmart: '',
@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
       gallery: ['images/products/variety-pack-1.jpg', 'images/products/variety-cans-sky-1.jpg', 'images/products/variety-pack-1.jpg', 'images/products/variety-pack-1.jpg'],
       description:
         "Can\u2019t decide? Try all three of our award-winning non-alcoholic craft beers in one convenient 12-pack.",
-      nutrition: { calories: '81–86', carbs: '16–18g', protein: '1.5g', fat: '0g' },
+      nutrition: { calories: '69', carbs: '14g', protein: '1.5g', fat: '0g' },
       retailers: {
         amazon: 'https://www.amazon.com/dp/B0DJCD29X9?maas=maas_adg_C25EB845C4CC3FEB858A8382B4387586_afap_abs&ref_=aa_maas&tag=maas',
         walmart: '',
@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (pdpImage) {
           if (pdpImage.tagName === 'IMG') {
             pdpImage.src = variant.image;
-            pdpImage.alt = 'KIT ' + variant.name;
+            pdpImage.alt = 'Kit ' + variant.name;
           } else {
             pdpImage.style.backgroundColor = variant.color;
           }
