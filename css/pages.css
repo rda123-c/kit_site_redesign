@@ -1029,27 +1029,26 @@
 
 /* Distributor Section */
 .distributor-section {
-  padding: var(--space-3xl) 0;
+  padding: var(--space-2xl) 0;
   background-color: var(--kit-white);
+  border-top: 1px solid #E8E2DC;
 }
 
 .distributor-content {
-  max-width: 900px;
-  margin: 0 auto;
   text-align: center;
 }
 
 .distributor-content h2 {
   font-family: var(--font-family-serif);
-  font-size: var(--fs-h2);
+  font-size: var(--fs-h4);
   color: var(--kit-charcoal);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
 }
 
 .distributor-subtext {
-  font-size: var(--fs-body);
+  font-size: var(--fs-body-sm);
   color: var(--kit-dark-gray);
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-lg);
 }
 
 .distributor-subtext a {
@@ -1059,25 +1058,25 @@
 
 .distributor-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-lg);
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-md);
   text-align: left;
 }
 
 .distributor-card {
   background-color: #F5F0EB;
-  border-radius: 8px;
-  padding: var(--space-lg);
+  border-radius: 6px;
+  padding: var(--space-md);
 }
 
 .distributor-card h3 {
   font-family: var(--font-family-sans);
-  font-size: var(--fs-body);
+  font-size: 0.7rem;
   font-weight: var(--fw-semibold);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   color: var(--kit-charcoal);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
 }
 
 .distributor-card ul {
@@ -1087,9 +1086,9 @@
 }
 
 .distributor-card li {
-  font-size: var(--fs-body);
+  font-size: 0.8rem;
   color: var(--kit-dark-gray);
-  padding: var(--space-xs) 0;
+  line-height: 1.5;
 }
 
 /* Shop Online Fallback Section */
@@ -2251,12 +2250,12 @@
   }
 
   .distributor-section {
-    padding: var(--space-2xl) 0;
+    padding: var(--space-xl) 0;
   }
 
   .distributor-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-md);
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
   }
 
   .shop-online-section {
