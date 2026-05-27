@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Keep this page out of search engines and crawlers -->
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WC5PPFFXS4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WC5PPFFXS4');
+    </script>
+
+    <!-- Meta Pixel -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1373698818117950');
+      fbq('track', 'PageView');
+    </script>
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Win Hearts of Pine Tickets | KIT NON-ALC">
+    <meta property="og:description" content="Enter to win a pair of Hearts of Pine tickets. Multiple winners throughout the season. No purchase necessary.">
+    <meta property="og:image" content="https://kit-na.com/images/og-share.jpg">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="images/logos/Kit_Non_Alc_Black.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <title>Win Hearts of Pine Tickets | KIT NON-ALC</title>
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+
+    <style>
+        /* ============================================
+           Giveaway landing page — self-contained styles
+           Uses brand tokens from variables.css
+           ============================================ */
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background: var(--kit-light-gray);
+            font-family: var(--font-family-sans);
+            color: var(--kit-charcoal);
+            line-height: var(--lh-body);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Minimal header — logo only, no nav */
+        .giveaway-header {
+            background: var(--kit-white);
+            padding: var(--space-md) var(--space-xl);
+            border-bottom: 1px solid var(--kit-medium-gray);
+            text-align: center;
+        }
+        .giveaway-header img {
+            height: 36px;
+            width: auto;
+        }
+
+        /* Hero band — Blonde Blue full bleed */
+        .giveaway-hero {
+            background: var(--kit-blonde-blue);
+            color: var(--kit-white);
+            padding: var(--space-3xl) var(--space-xl) var(--space-2xl);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .giveaway-hero::before {
+            /* subtle diagonal line texture */
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: repeating-linear-gradient(
+                135deg,
+                rgba(255,255,255,0.06) 0 2px,
+                transparent 2px 28px
+            );
+            pointer-events: none;
+        }
+        .giveaway-hero-inner {
+            position: relative;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .giveaway-eyebrow {
+            font-family: var(--font-family-sans);
+            font-weight: var(--fw-bold);
+            font-size: var(--fs-eyebrow);
+            letter-spacing: var(--ls-eyebrow);
+            text-transform: uppercase;
+            color: var(--kit-white);
+            opacity: 0.85;
+            margin: 0 0 var(--space-md);
+        }
+        .giveaway-headline {
+            font-family: var(--font-family-serif);
+            font-weight: var(--fw-semi-bold);
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            line-height: var(--lh-tight);
+            margin: 0 0 var(--space-md);
+            letter-spacing: var(--ls-tight);
+        }
+        .giveaway-sub {
+            font-size: var(--fs-subhead);
+            line-height: var(--lh-body);
+            margin: 0 auto;
+            max-width: 560px;
+            opacity: 0.95;
+        }
+
+        /* Form card */
+        .giveaway-main {
+            flex: 1;
+            padding: var(--space-3xl) var(--space-md);
+            display: flex;
+            justify-content: center;
+        }
+        .giveaway-card {
+            background: var(--kit-white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            padding: var(--space-2xl) var(--space-xl);
+            width: 100%;
+            max-width: 520px;
+        }
+        .giveaway-card h2 {
+            font-family: var(--font-family-serif);
+            font-weight: var(--fw-semi-bold);
+            font-size: var(--fs-h3);
+            color: var(--kit-charcoal);
+            margin: 0 0 var(--space-sm);
+            line-height: var(--lh-tight);
+        }
+        .giveaway-card .lead {
+            font-size: var(--fs-body);
+            color: var(--kit-dark-gray);
+            margin: 0 0 var(--space-xl);
+        }
+
+        /* Form grid */
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-md);
+        }
+        .form-group {
+            margin-bottom: var(--space-md);
+        }
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+        .form-group label {
+            display: block;
+            font-family: var(--font-family-sans);
+            font-weight: var(--fw-bold);
+            font-size: var(--fs-eyebrow);
+            letter-spacing: var(--ls-wide);
+            text-transform: uppercase;
+            color: var(--kit-charcoal);
+            margin-bottom: var(--space-xs);
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"] {
+            width: 100%;
+            padding: 0.75rem 0.875rem;
+            border: 1.5px solid var(--kit-medium-gray);
+            border-radius: var(--radius-md);
+            font-family: var(--font-family-sans);
+            font-size: var(--fs-body);
+            color: var(--kit-charcoal);
+            background: var(--kit-white);
+            transition: border-color var(--transition-base), box-shadow var(--transition-base);
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--kit-blonde-blue);
+            box-shadow: 0 0 0 3px rgba(0, 130, 202, 0.15);
+        }
+        .form-group input:invalid:not(:placeholder-shown) {
+            border-color: var(--kit-blonde-red);
+        }
+
+        /* Checkbox row */
+        .checkbox-row {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-sm);
+            margin: var(--space-lg) 0;
+            font-size: var(--fs-body-sm);
+            color: var(--kit-dark-gray);
+            line-height: var(--lh-body);
+        }
+        .checkbox-row input[type="checkbox"] {
+            margin-top: 0.2em;
+            width: 18px;
+            height: 18px;
+            accent-color: var(--kit-blonde-blue);
+            flex-shrink: 0;
+        }
+        .checkbox-row label {
+            cursor: pointer;
+        }
+
+        /* Submit button */
+        .btn-submit {
+            display: block;
+            width: 100%;
+            background: var(--kit-blonde-red);
+            color: var(--kit-white);
+            border: none;
+            border-radius: var(--radius-md);
+            padding: 0.95rem 1.25rem;
+            font-family: var(--font-family-sans);
+            font-weight: var(--fw-bold);
+            font-size: var(--fs-body);
+            letter-spacing: var(--ls-wide);
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background var(--transition-base), transform var(--transition-fast);
+        }
+        .btn-submit:hover:not(:disabled) {
+            background: #d65a48;
+        }
+        .btn-submit:active:not(:disabled) {
+            transform: translateY(1px);
+        }
+        .btn-submit:disabled {
+            background: var(--kit-medium-gray);
+            cursor: not-allowed;
+        }
+
+        /* Fine print */
+        .fine-print {
+            margin-top: var(--space-lg);
+            font-size: 0.75rem;
+            color: var(--kit-dark-gray);
+            text-align: center;
+            line-height: var(--lh-body);
+        }
+
+        /* Error message */
+        .form-error {
+            display: none;
+            background: #fce8e4;
+            color: #a02e1d;
+            border-radius: var(--radius-md);
+            padding: var(--space-sm) var(--space-md);
+            font-size: var(--fs-body-sm);
+            margin-bottom: var(--space-md);
+        }
+        .form-error.show { display: block; }
+
+        /* Thank-you state */
+        .thanks-state {
+            display: none;
+            text-align: center;
+            padding: var(--space-lg) 0;
+        }
+        .thanks-state.show { display: block; }
+        .thanks-mark {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: var(--kit-blonde-blue);
+            color: var(--kit-white);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-lg);
+            font-size: 2rem;
+            font-weight: var(--fw-bold);
+        }
+        .thanks-state h2 {
+            font-family: var(--font-family-serif);
+            font-weight: var(--fw-semi-bold);
+            font-size: var(--fs-h2);
+            color: var(--kit-charcoal);
+            margin: 0 0 var(--space-md);
+        }
+        .thanks-state p {
+            font-size: var(--fs-subhead);
+            color: var(--kit-dark-gray);
+            margin: 0 auto var(--space-md);
+            max-width: 380px;
+        }
+        .thanks-cta {
+            display: inline-block;
+            margin-top: var(--space-md);
+            background: transparent;
+            color: var(--kit-blonde-blue);
+            border: 1.5px solid var(--kit-blonde-blue);
+            border-radius: var(--radius-md);
+            padding: 0.7rem 1.25rem;
+            font-family: var(--font-family-sans);
+            font-weight: var(--fw-bold);
+            font-size: var(--fs-body-sm);
+            letter-spacing: var(--ls-wide);
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background var(--transition-base), color var(--transition-base);
+        }
+        .thanks-cta:hover {
+            background: var(--kit-blonde-blue);
+            color: var(--kit-white);
+        }
+
+        /* Loading spinner inside button */
+        .btn-submit .spinner {
+            display: none;
+            width: 1em;
+            height: 1em;
+            border: 2px solid rgba(255,255,255,0.4);
+            border-top-color: var(--kit-white);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+            vertical-align: -2px;
+            margin-right: var(--space-sm);
+        }
+        .btn-submit.loading .spinner { display: inline-block; }
+        .btn-submit.loading .btn-text { opacity: 0.85; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* Footer */
+        .giveaway-footer {
+            text-align: center;
+            padding: var(--space-xl) var(--space-md);
+            font-size: 0.75rem;
+            color: var(--kit-dark-gray);
+            background: var(--kit-light-gray);
+        }
+        .giveaway-footer a {
+            color: var(--kit-dark-gray);
+            text-decoration: underline;
+        }
+
+        /* Mobile tweaks */
+        @media (max-width: 520px) {
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .giveaway-card { padding: var(--space-xl) var(--space-lg); }
+            .giveaway-hero { padding: var(--space-2xl) var(--space-md) var(--space-xl); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Minimal branded header (no nav — keep users on the page) -->
+    <header class="giveaway-header">
+        <img src="images/logos/Kit_Non_Alc_Black.svg" alt="KIT NON-ALC">
+    </header>
+
+    <!-- Hero -->
+    <section class="giveaway-hero">
+        <div class="giveaway-hero-inner">
+            <p class="giveaway-eyebrow">KIT × Hearts of Pine</p>
+            <h1 class="giveaway-headline">Win a Pair of Hearts of Pine Tickets</h1>
+            <p class="giveaway-sub">Enter to win a pair of Hearts of Pine tickets. Multiple winners throughout the season. No purchase necessary.</p>
+        </div>
+    </section>
+
+    <!-- Form -->
+    <main class="giveaway-main">
+        <div class="giveaway-card">
+            <!-- Form state -->
+            <div id="formState">
+                <h2>Enter the giveaway</h2>
+                <p class="lead">Drop your info below. Winners notified by email.</p>
+
+                <div class="form-error" id="formError">Something went wrong submitting your entry. Please try again or email <a href="mailto:marketing@kit-na.com">marketing@kit-na.com</a>.</div>
+
+                <form id="giveawayForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First name</label>
+                            <input type="text" id="firstName" name="firstName" autocomplete="given-name" placeholder="First" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last name</label>
+                            <input type="text" id="lastName" name="lastName" autocomplete="family-name" placeholder="Last" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" autocomplete="email" placeholder="you@email.com" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(207) 555-1234" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="zip">ZIP code</label>
+                            <input type="text" id="zip" name="zip" autocomplete="postal-code" placeholder="04101" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" required>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-row">
+                        <input type="checkbox" id="marketingOptIn" name="marketingOptIn" value="yes">
+                        <label for="marketingOptIn">Yes, send me KIT news, drops, and event invites. (Optional)</label>
+                    </div>
+
+                    <button type="submit" class="btn-submit" id="submitBtn">
+                        <span class="spinner" aria-hidden="true"></span>
+                        <span class="btn-text">Enter to win</span>
+                    </button>
+
+                    <p class="fine-print">
+                        No purchase necessary. Must be 21+ to win. One entry per person per drawing. By entering, you agree to be contacted if you win.
+                    </p>
+                </form>
+            </div>
+
+            <!-- Thank-you state -->
+            <div class="thanks-state" id="thanksState" role="status" aria-live="polite">
+                <div class="thanks-mark" aria-hidden="true">✓</div>
+                <h2>You're entered.</h2>
+                <p>Good luck. We'll email the winners after each drawing.</p>
+                <p>In the meantime — <strong>have a KIT.</strong></p>
+                <a href="https://kit-na.com" class="thanks-cta">Visit kit-na.com</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="giveaway-footer">
+        <p>© 2026 KIT NON-ALC · Portland, ME · <a href="mailto:marketing@kit-na.com">marketing@kit-na.com</a></p>
+    </footer>
+
+    <script>
+    (function() {
+        // ============================================
+        // CONFIGURATION — paste your Apps Script web app URL here
+        // (See deployment instructions in giveaway-README.md)
+        // ============================================
+        var WEBHOOK_URL = 'PASTE_YOUR_APPS_SCRIPT_WEBHOOK_URL_HERE';
+
+        var form = document.getElementById('giveawayForm');
+        var submitBtn = document.getElementById('submitBtn');
+        var formError = document.getElementById('formError');
+        var formState = document.getElementById('formState');
+        var thanksState = document.getElementById('thanksState');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            formError.classList.remove('show');
+
+            // Native HTML5 validation
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            // Build payload
+            var payload = {
+                firstName: document.getElementById('firstName').value.trim(),
+                lastName: document.getElementById('lastName').value.trim(),
+                email: document.getElementById('email').value.trim(),
+                phone: document.getElementById('phone').value.trim(),
+                zip: document.getElementById('zip').value.trim(),
+                marketingOptIn: document.getElementById('marketingOptIn').checked ? 'Yes' : 'No',
+                source: 'giveaway-hearts-of-pine',
+                userAgent: navigator.userAgent,
+                submittedAt: new Date().toISOString()
+            };
+
+            submitBtn.classList.add('loading');
+            submitBtn.disabled = true;
+
+            // POST to Apps Script. Apps Script web apps don't allow custom CORS headers,
+            // so we send as text/plain and parse JSON on the server side.
+            fetch(WEBHOOK_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                body: JSON.stringify(payload)
+            })
+            .then(function() {
+                // With mode: 'no-cors' we can't read the response, but the request goes through.
+                // Apps Script will append the row server-side.
+                if (typeof gtag === 'function') {
+                    gtag('event', 'giveaway_entry', {
+                        event_category: 'engagement',
+                        event_label: 'hearts-of-pine'
+                    });
+                }
+                if (typeof fbq === 'function') {
+                    fbq('track', 'Lead', { content_name: 'Hearts of Pine Giveaway' });
+                }
+                formState.style.display = 'none';
+                thanksState.classList.add('show');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            })
+            .catch(function(err) {
+                console.error('Giveaway submit failed:', err);
+                formError.classList.add('show');
+                submitBtn.classList.remove('loading');
+                submitBtn.disabled = false;
+            });
+        });
+    })();
+    </script>
+
+</body>
+</html>
